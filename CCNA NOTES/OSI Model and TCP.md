@@ -171,3 +171,10 @@ Same-Layer Interactions:
 Example:
 
 The Application Layer of YouTube's web server and your PC's browser.
+
+| Term | Think Of | Uses |
+|------|----------|------|
+| **Process-to-Process** | Application ↔ Application | **Port Numbers** |
+| **Host-to-Host** | Computer ↔ Computer | **IP Addresses** |
+| **Node-to-Node** | One Device ↔ Next Device | **MAC Addresses** |
+| **Peer-to-Peer** | Same OSI Layer ↔ Same OSI Layer | **Protocol Communication** |
