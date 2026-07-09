@@ -246,7 +246,7 @@ Its job is simply:
 
 ---
 
-### 3. Node-to-Node Communication (Layer 2)
+### 3. Node-to-Node Communication or Hop-to-Hop (Layer 2)
 
 A **node** is any device connected to the network.
 
