@@ -178,3 +178,139 @@ The Application Layer of YouTube's web server and your PC's browser.
 | **Host-to-Host** | Computer ↔ Computer | **IP Addresses** |
 | **Node-to-Node** | One Device ↔ Next Device | **MAC Addresses** |
 | **Peer-to-Peer** | Same OSI Layer ↔ Same OSI Layer | **Protocol Communication** |
+
+---
+
+### Communication Types in Networking
+
+### 1. Process-to-Process Communication (Layer 4)
+
+A **process** is simply a running application.
+
+### Examples
+- Chrome
+- WhatsApp
+- YouTube
+- FTP Server
+
+Suppose you open a webpage:
+
+```text
+Chrome (Port 50000)
+        │
+        │ TCP
+        ▼
+Web Server (Port 80)
+```
+
+Here:
+- **Source Process:** Chrome
+- **Destination Process:** Web Server
+
+The **Transport Layer** uses **port numbers** to ensure data reaches the correct application.
+
+### Example
+
+```text
+192.168.1.10:50500 ─────────► 142.250.183.14:443
+```
+
+> **IP** identifies the computer.  
+> **Port** identifies the application.
+
+---
+
+### 2. Host-to-Host Communication (Layer 3)
+
+A **host** is any device with an IP address.
+
+### Example
+
+```text
+Laptop (192.168.1.10)
+          │
+          │ IP
+          ▼
+Server (142.250.183.14)
+```
+
+The **Network Layer** only cares about:
+- Source IP
+- Destination IP
+
+It doesn't know whether the packet belongs to Chrome, YouTube, or WhatsApp.
+
+Its job is simply:
+
+> "Take this packet from Host A to Host B."
+
+---
+
+### 3. Node-to-Node Communication (Layer 2)
+
+A **node** is any device connected to the network.
+
+### Examples
+- PC
+- Switch
+- Router
+- Printer
+
+Communication happens **only between directly connected devices**.
+
+### Example
+
+```text
+PC ───── Switch ───── Router
+```
+
+**Step 1**
+
+```text
+PC → Switch
+```
+
+This is **Node-to-Node** communication.
+
+**Step 2**
+
+```text
+Switch → Router
+```
+
+Again, this is **Node-to-Node** communication.
+
+Each hop uses **MAC addresses**, not IP addresses.
+
+### Example Ethernet Frame
+
+```text
+Source MAC → Destination MAC
+```
+
+The destination MAC changes at every hop.
+
+---
+
+## 4. Peer-to-Peer Communication
+
+This doesn't mean a P2P file-sharing application. In the OSI model, it refers to communication between the **same layers** on different devices.
+
+### Example
+
+```text
+Computer A                 Computer B
+
+Application  <------->  Application
+Transport    <------->  Transport
+Network      <------->  Network
+Data Link    <------->  Data Link
+Physical     <------->  Physical
+```
+
+Each layer communicates **logically** with its corresponding layer (**peer**) on the other device using its protocol.
+
+### Examples
+- TCP communicates with TCP.
+- IP communicates with IP.
+- Ethernet communicates with Ethernet.
