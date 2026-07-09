@@ -29,10 +29,6 @@ You can use a "Rollover cable" : DB9 serial connector to RJ45 OR a DB9 Serial to
 +----------------------------+
 ```
 
-<p align="center">
-  <img src="images/console-connection.png" alt="Cisco Console Connection" width="500">
-</p>
-
 ![image](https://github.com/psaumur/CCNA/assets/106411237/0527c007-d607-4bef-8ce1-7b18a177614d)
 
 ### How do you actually access the CLI?
