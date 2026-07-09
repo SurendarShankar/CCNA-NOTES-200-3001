@@ -29,6 +29,12 @@ You can use a "Rollover cable" : DB9 serial connector to RJ45 OR a DB9 Serial to
 +----------------------------+
 ```
 
+<p align="center">
+  <img src="https://images.openai.com/static-rsc-4/C81UDTRPwtO2d_R2z-DyGaDvAVvegWX8urOrug9DErbBu8_iQp6XP6krWCLJ40yvImOkoneHXHe6bzSmbr8-G_TPi1l5sJwzFiK7PGy_FfoHgGpGLBQBP3l0VwMzPFBTYpRWnjA"
+       alt="Cisco Console Connection"
+       width="500">
+</p>
+
 ![image](https://github.com/psaumur/CCNA/assets/106411237/0527c007-d607-4bef-8ce1-7b18a177614d)
 
 ### How do you actually access the CLI?
