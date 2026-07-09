@@ -33,7 +33,7 @@ A special thanks to the original author for creating and sharing such a well-str
 ## Module 1 - Networking Fundamentals
 
 - Day 01 - [Networking Devices](https://github.com/SurendarShankar/CCNA-NOTES-200-3001/blob/main/CCNA%20NOTES/Networking%20Devices.md)
-- Day 02 - [Interfaces and Cables](LINK)
+- Day 02 - [Interfaces and Cables](https://github.com/SurendarShankar/CCNA-NOTES-200-3001/blob/main/CCNA%20NOTES/Interfaces%20And%20Cables.md)
 - Day 03 - [OSI Model & TCP/IP](LINK)
 - Day 04 - [Introduction to Cisco CLI](LINK)
 - Day 05 - [Ethernet LAN Switching Part 1](LINK)
