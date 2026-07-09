@@ -218,6 +218,13 @@ The **Transport Layer** uses **port numbers** to ensure data reaches the correct
 > **IP** identifies the computer.  
 > **Port** identifies the application.
 
+| Feature | End-to-End Communication | Process-to-Process Communication |
+|---------|--------------------------|----------------------------------|
+| **Meaning** | Communication between two end hosts (devices). | Communication between applications (processes) running on two hosts. |
+| **Layer** | Transport Layer (Layer 4) | Transport Layer (Layer 4) |
+| **Identified By** | Source and destination hosts | Source and destination **port numbers** |
+| **Example** | Laptop ↔ Web Server | Chrome ↔ Web Server (HTTP) |
+
 ---
 
 ### 2. Host-to-Host Communication (Layer 3)
