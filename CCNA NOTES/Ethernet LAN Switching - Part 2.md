@@ -121,6 +121,7 @@ SW1 #clear mac address-table dynamic interface <optional Interface>
 // clears the MAC table entry of the Switch by it's **INTERFACE n**ame.
 
 ---
+### For My Understandibg the diffrence
 
 ### ARP vs Ping
 
@@ -185,8 +186,6 @@ If the reply is received, the ping is successful. It confirms that the destinati
 - **Ping asks:** *"Are you alive and reachable?"*
 
 ---
-
-### For My Understandibg the diffrence
 
 ### Easy Way to Remember
 
