@@ -36,7 +36,7 @@ A special thanks to the original author for creating and sharing such a well-str
 - Day 02 - [Interfaces and Cables](https://github.com/SurendarShankar/CCNA-NOTES-200-3001/blob/main/CCNA%20NOTES/Interfaces%20And%20Cables.md)
 - Day 03 - [OSI Model & TCP/IP](https://github.com/SurendarShankar/CCNA-NOTES-200-3001/blob/main/CCNA%20NOTES/OSI%20Model%20and%20TCP.md)
 - Day 04 - [Introduction to Cisco CLI](https://github.com/SurendarShankar/CCNA-NOTES-200-3001/blob/main/CCNA%20NOTES/Intro%20to%20the%20CLI.md)
-- Day 05 - [Ethernet LAN Switching Part 1](LINK)
+- Day 05 - [Ethernet LAN Switching Part 1](https://github.com/SurendarShankar/CCNA-NOTES-200-3001/blob/main/CCNA%20NOTES/Ethernet%20LAN%20Switching%20-%20Part%201.md)
 - Day 06 - [Ethernet LAN Switching Part 2](LINK)
 - Day 07 - [IPv4 Addressing Part 1](LINK)
 - Day 08 - [IPv4 Addressing Part 2](LINK)
