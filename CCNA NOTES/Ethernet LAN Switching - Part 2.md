@@ -22,6 +22,17 @@ THEREFORE the size of the ETHERNET HEADER + TRAILER is 18 bytes
 
 (6 + 6 + 2 + 4 bytes for the FRAME CHECK SEQUENCE)
 
+### Why aren't the Preamble and SFD part of the Ethernet header?
+
+The **Preamble** and **SFD (Start Frame Delimiter)** are **not considered part of the Ethernet header** because they are **not actual frame information**.
+
+Instead, they are transmitted **before the Ethernet frame** to help the **receiving device** prepare for the incoming frame.
+
+- **Preamble (7 bytes):** Synchronizes the receiver's clock with the sender's clock.
+- **SFD (1 byte):** Marks the exact start of the Ethernet frame, indicating that the next byte is the **Destination MAC Address**.
+
+Once the receiver detects the SFD, it begins reading the actual Ethernet frame. Therefore, the **Ethernet header starts with the Destination MAC Address**, not with the Preamble or SFD.
+
 ---
 
 The MINIMUM size for an ETHERNET FRAME (Header + Payload [PACKET] + Trailer) is 64 BYTES.
