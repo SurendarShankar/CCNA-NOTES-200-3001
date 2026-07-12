@@ -394,3 +394,66 @@ DESTINATION IP : 192.168.1.255 (Broadcast IP address)
 DESTINATION MAC : FFFF.FFFF.FFFF (Broadcast MAC address)
 
 Because of the two 'reserved' addresses, the range of USABLE HOST ADDRESSES is 1 to 254.
+
+### What is a Network Address?
+
+A **Network Address** is the IP address that **identifies an entire network**. It is not assigned to any device.
+
+**Key Points:**
+- Identifies the network.
+- First IP address in a subnet.
+- All host bits are **0**.
+- Cannot be assigned to a host.
+
+**Example:**
+
+```text
+Network: 192.168.1.0/24
+
+Network Address: 192.168.1.0
+```
+
+---
+
+### What is a Broadcast Address?
+
+A **Broadcast Address** is the IP address used to **send data to every device on a network simultaneously**.
+
+**Key Points:**
+- Sends data to all devices in the subnet.
+- Last IP address in a subnet.
+- All host bits are **1**.
+- Cannot be assigned to a host.
+
+**Example:**
+
+```text
+Network: 192.168.1.0/24
+
+Broadcast Address: 192.168.1.255
+```
+
+---
+
+### Example
+
+For the subnet:
+
+```text
+192.168.1.0/24
+```
+
+| Type | Address |
+|------|---------|
+| Network Address | `192.168.1.0` |
+| First Host | `192.168.1.1` |
+| Last Host | `192.168.1.254` |
+| Broadcast Address | `192.168.1.255` |
+
+---
+
+### Easy Way to Remember
+
+- **Network Address** → Identifies the **network**.
+- **Host Address** → Identifies a **device**.
+- **Broadcast Address** → Sends data to **all devices** on the network.
