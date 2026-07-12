@@ -221,6 +221,45 @@ It means the FIRST 24 BITS of this address represent the NETWORK portion of the 
 
 .254 is the HOST PORTION (the last OCTET)
 
+### Network Portion and Host Portion
+
+Every IPv4 address has **two parts**:
+
+- **Network Portion (Network ID)** – Identifies the network.
+- **Host Portion (Host ID)** – Identifies a specific device within that network.
+
+---
+
+### Simple Analogy
+
+Think of it like a postal address:
+
+- **Network Portion** = City or Street name (tells you where to go)
+- **Host Portion** = House number (tells you which house)
+
+---
+
+### Example: `192.168.1.10/24`
+
+The **`/24`** means:
+
+- **First 24 bits** = Network Portion
+- **Last 8 bits** = Host Portion
+
+```text
+IP Address: 192.168.1.10
+
+Network Portion      Host Portion
+192.168.1            10
+```
+
+So:
+
+- **Network ID:** `192.168.1.0`
+- **Host ID:** `10`
+
+This means the device with IP address **`192.168.1.10`** belongs to the **`192.168.1.0/24`** network.
+
 ![image](https://github.com/psaumur/CCNA/assets/106411237/2e7c64e1-5689-486a-bba0-9623f5e8de7d)
 
 
