@@ -153,6 +153,38 @@ Protocol (Layer 2 Status)
 | **Status** | Displays the **Physical Layer (Layer 1)** status of the interface, such as `up`, `down`, or `administratively down`. |
 | **Protocol** | Displays the **Data Link Layer (Layer 2)** status of the interface, such as `up` or `down`. |
 
+## 1. Status (Physical Layer)
+
+**Status** tells you whether the **physical interface** is operational.
+
+It checks things like:
+
+- Is the interface enabled (`no shutdown`)?
+- Is the network cable connected?
+- Is the hardware working?
+
+### Possible Values
+
+| **Status** | **Meaning** |
+|------------|-------------|
+| `up` | The physical interface is working correctly. |
+| `down` | The cable may be disconnected, or there is no physical connection. |
+| `administratively down` | The interface has been manually disabled using the `shutdown` command. |
+
+---
+
+## 2. Protocol (Data Link Layer)
+
+**Protocol** tells you whether the **Layer 2 communication** on the interface is working.
+
+It checks whether the interface can properly send and receive Ethernet frames (or other Layer 2 frames).
+
+### Possible Values
+
+| **Protocol** | **Meaning** |
+|--------------|-------------|
+| `up` | Layer 2 is working correctly. |
+| `down` | Layer 2 is not functioning, even if the physical connection exists. |
 ---
 
 // configure terminal cmd
