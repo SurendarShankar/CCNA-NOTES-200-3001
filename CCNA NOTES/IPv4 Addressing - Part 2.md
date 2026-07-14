@@ -144,6 +144,14 @@ Protocol (Layer 2 Status)
   
 ![image](https://github.com/psaumur/CCNA/assets/106411237/fa113ff0-a8ee-410b-ab3e-64684654cac6)
 
+| Column | Meaning |
+|--------|---------|
+| **Interface** | The name of the network interface (e.g., `GigabitEthernet0/0`, `FastEthernet0/1`). |
+| **IP-Address** | The IP address assigned to the interface. If no IP is assigned, it displays `unassigned`. |
+| **OK?** | Indicates whether the IP address is valid. `YES` is the normal and expected value. |
+| **Method** | Shows how the IP address was assigned, such as `manual` (configured by the administrator) or `DHCP` (assigned automatically by a DHCP server). |
+| **Status** | Displays the **Physical Layer (Layer 1)** status of the interface, such as `up`, `down`, or `administratively down`. |
+| **Protocol** | Displays the **Data Link Layer (Layer 2)** status of the interface, such as `up` or `down`. |
 
 ---
 
