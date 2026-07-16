@@ -40,7 +40,7 @@ A special thanks to the original author for creating and sharing such a well-str
 - Day 06 - [Ethernet LAN Switching Part 2](https://github.com/SurendarShankar/CCNA-NOTES-200-3001/blob/main/CCNA%20NOTES/Ethernet%20LAN%20Switching%20-%20Part%202.md)
 - Day 07 - [IPv4 Addressing Part 1](https://github.com/SurendarShankar/CCNA-NOTES-200-3001/blob/main/CCNA%20NOTES/IPv4%20Addressing%20-%20Part%201.md)
 - Day 08 - [IPv4 Addressing Part 2](https://github.com/SurendarShankar/CCNA-NOTES-200-3001/blob/main/CCNA%20NOTES/IPv4%20Addressing%20-%20Part%202.md)
-- Day 09 - [Switch Interfaces](LINK)
+- Day 09 - [Switch Interfaces](https://github.com/SurendarShankar/CCNA-NOTES-200-3001/blob/main/CCNA%20NOTES/Switch_Interfaces.md)
 - Day 10 - [IPv4 Header](LINK)
 - Day 11 - [Routing Fundamentals](LINK)
 - Day 12 - [Static Routing](LINK)
