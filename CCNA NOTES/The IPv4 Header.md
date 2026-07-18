@@ -259,6 +259,23 @@ TIME TO LIVE (TTL):
 - In practice, indicates a 'hop count': each time the packet arrives at a router, the router decreases the TTL by 1.
 - Recommended default TTL is 64.
 
+### How it works :
+
+- Every time a packet passes through a router (hop):
+
+```
+TTL = TTL − 1
+```
+Example:
+
+- Sender → Router 1 → Router 2 → Router 3 → Destination
+
+```
+TTL:       64       → 63       → 62       → 61
+```
+
+- If TTL reaches 0, the router discards the packet and usually sends an ICMP Time Exceeded message back to the sender.
+
 ---
 
 PROTOCOL:
