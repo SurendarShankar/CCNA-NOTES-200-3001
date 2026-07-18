@@ -313,3 +313,25 @@ OPTIONS:
 - LENGTH is 0-320 bits
 - Optional / Rarely Used
 - If the IHL field is greater than 5, it means that Options are present.
+
+### IHL (Internet Header Length)
+
+If:
+
+**IHL > 5**
+
+the IPv4 header is larger than the minimum **20 bytes**, meaning extra **Options** have been added.
+
+| IHL | Header Size | Options |
+|---|---|---|
+| 5 | 20 bytes | 0 bytes |
+| 6 | 24 bytes | 4 bytes |
+| 7 | 28 bytes | 8 bytes |
+| 10 | 40 bytes | 20 bytes |
+| 15 | 60 bytes | 40 bytes |
+
+**Formula:**
+
+`Header Size = IHL × 4 bytes`
+
+**Options Size = Header Size − 20 bytes**
