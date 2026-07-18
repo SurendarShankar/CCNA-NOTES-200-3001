@@ -59,6 +59,79 @@ INTERNET HEADER LENGTH (IHL):
 MINIMUM IPv4 HEADER LENGTH = 20 Bytes!
 MAXIMUM IPv4 HEADER LENGTH = 60 Bytes!
 
+### IPv4 IHL (Internet Header Length)
+
+The **IHL (Internet Header Length)** field is used to tell the receiving device where the **IPv4 header ends** and where the **actual data begins**.
+
+### Why is it needed?
+
+The IPv4 header is variable in size:
+
+- **Minimum:** 20 bytes
+- **Maximum:** 60 bytes
+
+The extra space is used for **options**.
+
+### IHL = 15
+
+The IHL value is **15 units**.
+
+Each unit is:
+
+**32 bits = 4 bytes**
+
+So:
+
+**15 units × 4 bytes per unit = 60 bytes**
+
+It is **not**:
+
+**15 × 4 bits**
+
+### Visualize It
+
+**IHL value = 15**
+
+[4 bytes] [4 bytes] [4 bytes] [4 bytes] [4 bytes]  
+[4 bytes] [4 bytes] [4 bytes] [4 bytes] [4 bytes]  
+[4 bytes] [4 bytes] [4 bytes] [4 bytes] [4 bytes]
+
+**15 groups × 4 bytes = 60 bytes**
+
+The **4 bytes** is the size of **one unit**.
+
+The **IHL value 15** says there are **15 such units**.
+
+### Simple Example
+
+If:
+
+**1 box = 4 apples**
+
+Then:
+
+**15 boxes = 15 × 4 = 60 apples**
+
+Similarly:
+
+**1 IHL unit = 4 bytes**
+
+**15 IHL units = 15 × 4 = 60 bytes**
+
+### Memory
+
+**IHL × 4 = IPv4 Header Size in Bytes**
+
+### Examples
+
+**IHL = 5**
+
+5 × 4 = **20 bytes**
+
+**IHL = 15**
+
+15 × 4 = **60 bytes**
+
 ---
 
 DSCP (Differentiated Services Code Point):
