@@ -190,6 +190,49 @@ IDENTIFICATION:
 - The MTU is usually 1500 bytes (Max size of an Ethernet frame)
 - Fragments are reassembled by the receiving host.
 
+### What is Fragmentation?
+
+In networking, **fragmentation** means breaking one large IP packet into multiple smaller packets.
+
+### Why is Fragmentation Needed?
+
+Every network link has a maximum packet size called **MTU (Maximum Transmission Unit)**.
+
+### Example
+
+**Large IPv4 packet = 4000 bytes**  
+**Link MTU = 1500 bytes**
+
+The **4000-byte packet** is too large for the link, so the router may split it into smaller fragments:
+
+```text
+Original Packet (4000 bytes)
+          ↓
+
+┌──────────────┐
+│ Fragment 1   │ 1500 bytes
+├──────────────┤
+│ Fragment 2   │ 1500 bytes
+├──────────────┤
+│ Fragment 3   │ 1000 bytes
+└──────────────┘
+```
+
+The destination then **reassembles the fragments** back into the original packet.
+
+### IPv4 Header Fields Used for Fragmentation
+
+#### 1. Identification
+
+- Identifies fragments belonging to the **same original packet**.
+- Every fragment carries the **same Identification value** so the destination knows they belong together.
+
+### Memory Trick
+
+- **Identification** → *Which packet do these fragments belong to?*
+- **Flags** → *Are there more fragments?*
+- **Fragment Offset** → *Where does this fragment belong?*
+
 ---
 
 FLAGS:
