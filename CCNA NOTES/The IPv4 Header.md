@@ -235,6 +235,11 @@ The destination then **reassembles the fragments** back into the original packet
 
 ---
 
+### Fragmentation Fields
+
+- **DF (Don't Fragment)** = Before fragmentation → **Can I split the packet?**
+- **Identification** = After fragmentation → **Which pieces belong together?**
+
 FLAGS:
 
 - LENGTH is 3 bits
