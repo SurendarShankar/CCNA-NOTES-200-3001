@@ -41,7 +41,7 @@ A special thanks to the original author for creating and sharing such a well-str
 - Day 07 - [IPv4 Addressing Part 1](https://github.com/SurendarShankar/CCNA-NOTES-200-3001/blob/main/CCNA%20NOTES/IPv4%20Addressing%20-%20Part%201.md)
 - Day 08 - [IPv4 Addressing Part 2](https://github.com/SurendarShankar/CCNA-NOTES-200-3001/blob/main/CCNA%20NOTES/IPv4%20Addressing%20-%20Part%202.md)
 - Day 09 - [Switch Interfaces](https://github.com/SurendarShankar/CCNA-NOTES-200-3001/blob/main/CCNA%20NOTES/Switch_Interfaces.md)
-- Day 10 - [IPv4 Header](LINK)
+- Day 10 - [IPv4 Header](https://github.com/SurendarShankar/CCNA-NOTES-200-3001/blob/main/CCNA%20NOTES/The%20IPv4%20Header.md)
 - Day 11 - [Routing Fundamentals](LINK)
 - Day 12 - [Static Routing](LINK)
 - Day 13 - [Life of a Packet](LINK)
