@@ -235,6 +235,11 @@ FLAGS:
 - Bit 1: Don't Fragment (DF bit), used to indicate a packet that should not be fragmented.
 - Bit 2: More Fragments (MF bit), set to 1 if there are more fragments in the packet, set to 0 for the last fragment or NO fragments.
 
+### Easy Memory Trick
+
+**DF = Don't Fragment** → Can I split this packet?
+
+**MF = More Fragments** → Are more pieces coming?
 ---
 
 FRAGMENT OFFSET:
