@@ -204,7 +204,6 @@ Link MTU = 1500 bytes
 
 The 4000-byte packet is too large for the link, so the router may split it into smaller fragments:
 
-```text
 Original Packet (4000 bytes)
           ↓
 
