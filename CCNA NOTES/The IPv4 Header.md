@@ -61,76 +61,76 @@ MAXIMUM IPv4 HEADER LENGTH = 60 Bytes!
 
 ### IPv4 IHL (Internet Header Length)
 
-The **IHL (Internet Header Length)** field is used to tell the receiving device where the **IPv4 header ends** and where the **actual data begins**.
+The IHL (Internet Header Length) field is used to tell the receiving device where the IPv4 header ends and where the actual data begins.
 
 ### Why is it needed?
 
 The IPv4 header is variable in size:
 
-- **Minimum:** 20 bytes
-- **Maximum:** 60 bytes
+- Minimum: 20 bytes
+- Maximum: 60 bytes
 
-The extra space is used for **options**.
+The extra space is used for options.
 
 ### IHL = 15
 
-The IHL value is **15 units**.
+The IHL value is 15 units.
 
 Each unit is:
 
-**32 bits = 4 bytes**
+32 bits = 4 bytes
 
 So:
 
-**15 units × 4 bytes per unit = 60 bytes**
+15 units × 4 bytes per unit = 60 bytes
 
-It is **not**:
+It is not:
 
-**15 × 4 bits**
+15 × 4 bits
 
 ### Visualize It
 
-**IHL value = 15**
+IHL value = 15
 
 [4 bytes] [4 bytes] [4 bytes] [4 bytes] [4 bytes]  
 [4 bytes] [4 bytes] [4 bytes] [4 bytes] [4 bytes]  
 [4 bytes] [4 bytes] [4 bytes] [4 bytes] [4 bytes]
 
-**15 groups × 4 bytes = 60 bytes**
+15 groups × 4 bytes = 60 bytes
 
-The **4 bytes** is the size of **one unit**.
+The 4 bytes is the size of one unit.
 
-The **IHL value 15** says there are **15 such units**.
+The IHL value 15 says there are 15 such units.
 
 ### Simple Example
 
 If:
 
-**1 box = 4 apples**
+1 box = 4 apples
 
 Then:
 
-**15 boxes = 15 × 4 = 60 apples**
+15 boxes = 15 × 4 = 60 apples
 
 Similarly:
 
-**1 IHL unit = 4 bytes**
+1 IHL unit = 4 bytes
 
-**15 IHL units = 15 × 4 = 60 bytes**
+15 IHL units = 15 × 4 = 60 bytes
 
 ### Memory
 
-**IHL × 4 = IPv4 Header Size in Bytes**
+IHL × 4 = IPv4 Header Size in Bytes
 
 ### Examples
 
-**IHL = 5**
+IHL = 5
 
-5 × 4 = **20 bytes**
+5 × 4 = 20 bytes
 
-**IHL = 15**
+IHL = 15
 
-15 × 4 = **60 bytes**
+15 × 4 = 60 bytes
 
 ---
 
@@ -150,15 +150,15 @@ ECN (Explicit Congestion Notification):
 
 ### What is ECN?
 
-**ECN (Explicit Congestion Notification)** allows network devices to notify the sender that congestion is occurring **without dropping packets**.
+ECN (Explicit Congestion Notification) allows network devices to notify the sender that congestion is occurring without dropping packets.
 
 ### Normally:
 
-**Congestion → Router drops packets → Sender detects loss → Reduces transmission rate**
+Congestion → Router drops packets → Sender detects loss → Reduces transmission rate
 
 ### With ECN:
 
-**Congestion → Router marks the packet → Receiver informs sender → Sender slows down**
+Congestion → Router marks the packet → Receiver informs sender → Sender slows down
 
 ### ECN Bits
 
@@ -167,8 +167,7 @@ ECN (Explicit Congestion Notification):
 | `00` | ECN not supported |
 | `01` | ECN-capable |
 | `10` | ECN-capable |
-| `11` | **Congestion Experienced (CE)** |
-
+| `11` | Congestion Experienced (CE) |
 ---
 
 TOTAL LENGTH:
@@ -192,18 +191,18 @@ IDENTIFICATION:
 
 ### What is Fragmentation?
 
-In networking, **fragmentation** means breaking one large IP packet into multiple smaller packets.
+In networking, fragmentation means breaking one large IP packet into multiple smaller packets.
 
 ### Why is Fragmentation Needed?
 
-Every network link has a maximum packet size called **MTU (Maximum Transmission Unit)**.
+Every network link has a maximum packet size called MTU (Maximum Transmission Unit).
 
 ### Example
 
-**Large IPv4 packet = 4000 bytes**  
-**Link MTU = 1500 bytes**
+Large IPv4 packet = 4000 bytes  
+Link MTU = 1500 bytes
 
-The **4000-byte packet** is too large for the link, so the router may split it into smaller fragments:
+The 4000-byte packet is too large for the link, so the router may split it into smaller fragments:
 
 ```text
 Original Packet (4000 bytes)
@@ -216,23 +215,10 @@ Original Packet (4000 bytes)
 ├──────────────┤
 │ Fragment 3   │ 1000 bytes
 └──────────────┘
-```
 
-The destination then **reassembles the fragments** back into the original packet.
-
-### IPv4 Header Fields Used for Fragmentation
-
-#### 1. Identification
-
-- Identifies fragments belonging to the **same original packet**.
-- Every fragment carries the **same Identification value** so the destination knows they belong together.
-
-### Memory Trick
-
-- **Identification** → *Which packet do these fragments belong to?*
-- **Flags** → *Are there more fragments?*
-- **Fragment Offset** → *Where does this fragment belong?*
-
+- Identification → Which packet do these fragments belong to?
+- Flags → Are there more fragments?
+- Fragment Offset → Where does this fragment belong?
 ---
 
 ### Fragmentation Fields
