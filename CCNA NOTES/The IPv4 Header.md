@@ -237,8 +237,8 @@ FLAGS:
 
 Easy Memory Trick :
 
--*DF = Don't Fragment* → Can I split this packet?
--*MF = More Fragments* → Are more pieces coming?
+- *DF = Don't Fragment* → Can I split this packet?
+- *MF = More Fragments* → Are more pieces coming?
 
 ---
 
