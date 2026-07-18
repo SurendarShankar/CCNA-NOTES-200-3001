@@ -148,6 +148,27 @@ ECN (Explicit Congestion Notification):
 - Provides end-to-end (between two endpoints) notification of network congestion WITHOUT dropping packets.
 - Optional feature that requires both endpoints, as well as the underlying network infrastructure to support it.
 
+### What is ECN?
+
+**ECN (Explicit Congestion Notification)** allows network devices to notify the sender that congestion is occurring **without dropping packets**.
+
+### Normally:
+
+**Congestion → Router drops packets → Sender detects loss → Reduces transmission rate**
+
+### With ECN:
+
+**Congestion → Router marks the packet → Receiver informs sender → Sender slows down**
+
+### ECN Bits
+
+| ECN Bits | Meaning |
+| -------- | ------- |
+| `00` | ECN not supported |
+| `01` | ECN-capable |
+| `10` | ECN-capable |
+| `11` | **Congestion Experienced (CE)** |
+
 ---
 
 TOTAL LENGTH:
