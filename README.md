@@ -43,7 +43,7 @@ A special thanks to the original author for creating and sharing such a well-str
 - Day 09 - [Switch Interfaces](https://github.com/SurendarShankar/CCNA-NOTES-200-3001/blob/main/CCNA%20NOTES/Switch_Interfaces.md)
 - Day 10 - [IPv4 Header](https://github.com/SurendarShankar/CCNA-NOTES-200-3001/blob/main/CCNA%20NOTES/The%20IPv4%20Header.md)
 - Day 11 - [Routing Fundamentals](https://github.com/SurendarShankar/CCNA-NOTES-200-3001/blob/main/CCNA%20NOTES/Routing%20Fundamentals%20-%20Part%201.md)
-- Day 12 - [Static Routing](LINK)
+- Day 12 - [Static Routing](http://github.com/SurendarShankar/CCNA-NOTES-200-3001/blob/main/CCNA%20NOTES/Static%20Routing%20-%20Part%202.md)
 - Day 13 - [Life of a Packet](LINK)
 - Day 14 - [Subnetting Part 1](LINK)
 - Day 15 - [Subnetting Part 2 (VLSM)](LINK)
