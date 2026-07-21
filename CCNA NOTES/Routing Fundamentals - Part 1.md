@@ -38,6 +38,6 @@ WAN (Wide Area Network) = network that extends over a large geographic area.
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/891fcfbe-7dc5-4fb2-9b02-c6905236761e)
 
-Easy Memory Trick
+### Easy Memory Trick
 - C = Connected network → "This whole network is attached to me."
 - L = Local IP → "This IP address is me (the router)."
