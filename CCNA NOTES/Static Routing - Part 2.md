@@ -50,6 +50,12 @@ STATIC ROUTE CONFIGURATION with *exit-interface*
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/dc93b5f9-791c-44fc-8b88-2053491183a9)
 
+ 
+### Static Route configuration
+- R1(config)# ip route ip-address netmask next-hop
+- R1(config)# ip route ip-address netmask exit-interface
+- R1(config)# ip route ip-address netmask exit-interface next-hop
+ 
 ---
 
 DEFAULT ROUTE
