@@ -288,6 +288,8 @@ PROTOCOL:
 - Value of 89 : OSPF (Dynamic Routing Protocol)
 - List of protocol numbers on Wikipedia : List of IP Protocol Numbers
 
+---
+
 HEADER CHECKSUM:
 
 - LENGTH is 16 bits
