@@ -46,7 +46,7 @@ A special thanks to the original author for creating and sharing such a well-str
 - Day 11 - [Static Routing](http://github.com/SurendarShankar/CCNA-NOTES-200-3001/blob/main/CCNA%20NOTES/Static%20Routing%20-%20Part%202.md)
 - Day 12 - [Life of a Packet](LINK)
 - Day 13 - [Subnetting Part 1](LINK)
-- Day 14 - [Subnetting Part 2](LINK)
+- Day 14 - [Subnetting Part 2](https://github.com/SurendarShankar/CCNA-NOTES-200-3001/blob/main/CCNA%20NOTES/Subnetting%20-%20Part%202.md)
 - Day 15 - [Subnetting Part 3 (VLSM)](LINK)
 
 ---
