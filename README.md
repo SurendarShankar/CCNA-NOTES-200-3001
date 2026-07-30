@@ -47,7 +47,7 @@ A special thanks to the original author for creating and sharing such a well-str
 - Day 12 - [Life of a Packet](https://github.com/SurendarShankar/CCNA-NOTES-200-3001/blob/main/CCNA%20NOTES/Life%20of%20a%20Packet.md)
 - Day 13 - [Subnetting Part 1](https://github.com/SurendarShankar/CCNA-NOTES-200-3001/blob/main/CCNA%20NOTES/Subnetting%20-%20Part%201.md)
 - Day 14 - [Subnetting Part 2](https://github.com/SurendarShankar/CCNA-NOTES-200-3001/blob/main/CCNA%20NOTES/Subnetting%20-%20Part%202.md)
-- Day 15 - [Subnetting Part 3 (VLSM)](LINK)
+- Day 15 - [Subnetting Part 3 (VLSM)](https://github.com/SurendarShankar/CCNA-NOTES-200-3001/blob/main/CCNA%20NOTES/Subnetting%20(VLSM)%20-%20Part%203.md)
 
 ---
 
