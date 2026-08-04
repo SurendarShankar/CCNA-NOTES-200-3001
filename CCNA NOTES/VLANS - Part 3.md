@@ -257,6 +257,8 @@ SVI = DOWN
 ```
 ---
 
+IT LOOKES IN CLI : SHOW VLAN BRIF
+
 ```text
 Port      Name      Status       VLAN
 Fa0/1               connected    10
@@ -284,6 +286,8 @@ Since VLAN 10 is active on the trunk:
 SVI = UP
 ```
 ---
+
+LOOKES IN CLI : SHOW INT TRUNK
 
 ```text
 Port      Mode      Encapsulation    Status      Native VLAN
