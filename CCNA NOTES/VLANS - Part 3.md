@@ -255,6 +255,8 @@ Therefore:
 ```text
 SVI = DOWN
 ```
+---
+
 ```text
 Port      Name      Status       VLAN
 Fa0/1               connected    10
@@ -281,7 +283,21 @@ Since VLAN 10 is active on the trunk:
 ```text
 SVI = UP
 ```
+---
 
+```text
+Port      Mode      Encapsulation    Status      Native VLAN
+Gi0/1     on        802.1q           trunking    1
+
+Port      VLANs Allowed on Trunk
+Gi0/1     10,20,30
+
+Port      VLANs Allowed and Active in Management Domain
+Gi0/1     10,20,30
+
+Port      VLANs in Spanning Tree Forwarding State and Not Pruned
+Gi0/1     10,20,30
+```
 ---
 
 # Condition 3: The VLAN Must NOT Be Shutdown
