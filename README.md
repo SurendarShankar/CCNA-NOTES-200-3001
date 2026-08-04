@@ -55,7 +55,7 @@ A special thanks to the original author for creating and sharing such a well-str
 
 - Day 16 - [VLANs Part 1](https://github.com/SurendarShankar/CCNA-NOTES-200-3001/blob/main/CCNA%20NOTES/VLANS%20-%20Part%201.md)
 - Day 17 - [VLANs Part 2](https://github.com/SurendarShankar/CCNA-NOTES-200-3001/blob/main/CCNA%20NOTES/VLANS%20-%20Part%202.md)
-- Day 18 - [VLANs Part 3](LINK)
+- Day 18 - [VLANs Part 3](https://github.com/SurendarShankar/CCNA-NOTES-200-3001/blob/main/CCNA%20NOTES/VLANS%20-%20Part%203.md)
 - Day 19 - [DTP & VTP](LINK)
 - Day 20 - [Spanning Tree Protocol Part 1](LINK)
 - Day 21 - [Spanning Tree Protocol Part 2](LINK)
