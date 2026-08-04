@@ -255,6 +255,12 @@ Therefore:
 ```text
 SVI = DOWN
 ```
+```text
+Port      Name      Status       VLAN
+Fa0/1               connected    10
+Fa0/2               connected    20
+Fa0/3               notconnect   10
+```
 
 ---
 
