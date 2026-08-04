@@ -126,6 +126,21 @@ All hosts should be able to connect with each other (tested with “ping”) as 
 
 ---
 
+| Feature | Access Port | Trunk Port | SVI (Switch Virtual Interface) |
+|---------|-------------|------------|--------------------------------|
+| **Purpose** | Connects end devices (PCs, Printers, IP Phones) | Connects switches, routers, or Layer 3 switches | Provides a logical interface for switch management or inter-VLAN routing |
+| **VLAN Support** | Carries **only one VLAN** | Carries **multiple VLANs** | Represents **one VLAN** |
+| **Frame Type** | Sends and receives **untagged** frames | Sends and receives **802.1Q tagged** frames (except the Native VLAN) | Does not forward Ethernet frames like a physical port |
+| **Interface Type** | Physical Interface | Physical Interface | Logical (Virtual) Interface |
+| **IP Address** | Normally **No** | Normally **No** | **Yes** |
+| **Used For** | Connecting end devices | Connecting network devices | Managing the switch or routing between VLANs (Layer 3 switch) |
+| **Configuration Example** | `switchport mode access` | `switchport mode trunk` | `interface vlan 10` |
+| **Example Devices** | PC, Printer, IP Phone | Switch, Router, Layer 3 Switch | Switch Management Interface |
+| **Traffic** | Single VLAN traffic | Multiple VLAN traffic | Management or routed traffic |
+| **CCNA Memory Trick** | **One Port → One VLAN** | **One Port → Many VLANs** | **Virtual Interface with an IP Address** |
+
+---
+
 # SVI (Switch Virtual Interface) - Conditions to Become UP/UP
 
 ## 💡 Easy Analogy
