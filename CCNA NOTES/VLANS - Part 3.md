@@ -125,7 +125,7 @@ The VLAN trunk has been successfully replaced by an Layer 3 SWITCH SVI.
 All hosts should be able to connect with each other (tested with “ping”) as well as reach the external internet (via the Cloud symbol attached to R1)
 
 ---
-- EXTRA :
+
 # SVI (Switch Virtual Interface) - Conditions to Become UP/UP
 
 ## 💡 Easy Analogy
