@@ -162,6 +162,10 @@ In Privileged EXEC mode:
 - Protocol for configuring VLANs on a Central SWITCH
     - A SERVER that other SWITCHES synch. to (auto configuring by connection)
 - Other switches (VTP CLIENTS) will synchronize their VLAN database to the SERVER
+```
+  How does a switch know which one is the VTP Server and which one is the VTP Client?
+  Answer: It doesn't discover this automatically. You configure the VTP mode manually on each switch.
+```
 - Designed for large networks with many VLANs (reduces manual configuration)
 - RARELY used. Recommended you DO NOT USE it
 - There are THREE VTP Versions :
