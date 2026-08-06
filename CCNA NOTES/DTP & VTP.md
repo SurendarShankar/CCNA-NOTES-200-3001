@@ -1,5 +1,10 @@
 # 19. DTP / VTP (Not in Syllabus)
 
+A proprietary protocol is a communication protocol that is owned and controlled by a single company or vendor. Other companies usually cannot modify or use it freely without permission or a license.
+
+- Simple Definition
+   - Proprietary Protocol = Company-owned protocol.
+
 DTP (Dynamic Trunking Protocol)
 
 - Protocol that allows SWITCHES to negotiate the status of their SWITCHPORTS, without manual configuration, to be:
