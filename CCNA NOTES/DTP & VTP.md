@@ -162,7 +162,7 @@ In Privileged EXEC mode:
 - Protocol for configuring VLANs on a Central SWITCH
     - A SERVER that other SWITCHES synch. to (auto configuring by connection)
 - Other switches (VTP CLIENTS) will synchronize their VLAN database to the SERVER
-```
+
  **VTP Synchronization (VTP Sync)**
 
 **Definition**
@@ -201,7 +201,7 @@ SW2 automatically creates:
 - You create VLANs **only on the VTP Server**.
 - The **VTP Client** receives the **VTP advertisements**.
 - The client **synchronizes** (updates) its VLAN database to match the server.
-```
+
 ```
   How does a switch know which one is the VTP Server and which one is the VTP Client?
   Answer: It doesn't discover this automatically. You configure the VTP mode manually on each switch.
