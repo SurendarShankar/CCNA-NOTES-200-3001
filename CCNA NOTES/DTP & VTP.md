@@ -93,6 +93,12 @@ SWITCHES that support both:
 
 TRUNK encapsulation can use DTP to negotiate the encapsulation they will use.
 
+### **Simple Meaning**
+
+When **two older Cisco switches** are connected, they first communicate using **DTP** to decide:
+
+> **"Which trunk encapsulation should we use: ISL or 802.1Q?"**
+
 - Negotiation is Enabled by default
 
 ```
