@@ -93,7 +93,7 @@ SWITCHES that support both:
 
 TRUNK encapsulation can use DTP to negotiate the encapsulation they will use.
 
-### **Simple Meaning**
+**Simple Meaning**
 
 When **two older Cisco switches** are connected, they first communicate using **DTP** to decide:
 
