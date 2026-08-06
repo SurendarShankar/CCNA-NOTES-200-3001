@@ -248,6 +248,49 @@ Connecting an old SWITCH with higher Revision Number to network (and if the VTP 
 
 </aside>
 
+`Real-World Danger (CCNA Exam Favorite)`
+
+Imagine:
+
+```text
+Old Switch
+Revision = 100
+(No VLANs)
+
+        ↓
+
+Connect it to the network
+```
+
+Your production network has:
+
+```text
+Revision = 20
+VLANs:
+- VLAN 10
+- VLAN 20
+- VLAN 30
+- VLAN 40
+```
+
+The old switch advertises:
+
+> **"My revision is 100."**
+
+All the other switches think:
+
+> **100 > 20, so this must be the newest VLAN database.**
+
+As a result:
+
+- The switches synchronize with the old switch.
+- The old switch's **empty VLAN database** overwrites the production VLAN database.
+- VLANs **10, 20, 30, and 40 are deleted** from the VTP domain.
+
+`CCNA Tip`
+
+**Always reset the VTP revision number before connecting a switch to an existing VTP network.**
+
 
 VTP CLIENTS:
 
