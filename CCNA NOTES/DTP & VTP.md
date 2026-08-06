@@ -151,7 +151,7 @@ SW2 and SW3 also get VLAN 10
 ```
 
 ---
-VTP (VLAN Trunking Protocol)
+# VTP (VLAN Trunking Protocol)
 
 In Privileged EXEC mode:
 
