@@ -115,14 +115,14 @@ When **two older Cisco switches** are connected, they first communicate using **
 
 This was added for my notice :
 
-# **VTP (VLAN Trunking Protocol)**
+**VTP (VLAN Trunking Protocol)**
 
-## **Purpose**
+**Purpose**
 VTP distributes **VLAN information** from one Cisco switch to other Cisco switches.
 
 ---
 
-## **Without VTP**
+**Without VTP**
 
 If you create:
 
@@ -134,7 +134,7 @@ on **Switch 1**, you must **manually create the same VLANs** on every other swit
 
 ---
 
-## **With VTP**
+**With VTP**
 
 You create the VLANs **only once** on the **VTP Server**, and they are **automatically shared** with other switches over **trunk links**.
 
@@ -151,7 +151,7 @@ SW2 and SW3 also get VLAN 10
 ```
 
 ---
-# VTP (VLAN Trunking Protocol)
+**VTP (VLAN Trunking Protocol)**
 
 In Privileged EXEC mode:
 
