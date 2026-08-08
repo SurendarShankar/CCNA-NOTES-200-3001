@@ -133,6 +133,27 @@ In THIS TOPOLOGY, SW1 becomes the ROOT BRIDGE due to it’s MAC ADDRESS being LO
 ![image](https://github.com/psaumur/CCNA/assets/106411237/b1e1a69d-4b9c-46bf-9b77-f30b9f7c3933)
 
 
+Sure. Think of PVST as running STP separately for each VLAN.
+
+Suppose you have 3 switches:
+
+    SW1
+   /   \
+  /     \
+SW2-----SW3
+
+There are two possible paths between switches, so there is redundancy. Without STP, this can create a Layer 2 loop.
+
+Now imagine you have:
+
+VLAN 10  
+VLAN 20
+
+With normal STP, you might have one STP topology that applies to both VLANs.
+
+But with PVST, each VLAN gets its own STP calculation.
+
+---
 ALL INTERFACES on the ROOT BRIDGE are DESIGNATED PORTS.
 
 DESIGNATED PORTS ARE IN A FORWARDING STATE!
