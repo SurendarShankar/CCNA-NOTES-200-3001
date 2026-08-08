@@ -192,7 +192,7 @@ ROOT BRIDGE
 - Once the topology has converged and all SWITCHES agree on the ROOT BRIDGE, only the ROOT BRIDGE sends BPDUs
 - Other SWITCHES in the network will forward these BPDUs, but will not generate their own original BPDUs
 
-A Designated Port (DP) is the STP port that is chosen to forward traffic for a specific network segmen
+- A Designated Port (DP) is the STP port that is chosen to forward traffic for a specific network segmen
 ---
 
 SPANNING TREE PROTOCOL STEPS
