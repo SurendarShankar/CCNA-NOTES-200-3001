@@ -118,6 +118,33 @@ WHAT ARE BPDUs USED FOR?
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/17f921f6-0583-4070-9493-5f5d80ad4866)
 
+If you mean **Bridge Priority in STP/PVST**, you can change the priority **without changing the VLAN number**.
+
+The important point is:
+
+**Bridge Priority changes in steps of 4096.**
+
+So the values are:
+
+`0, 4096, 8192, 12288, 16384, 20480, 24576, 28672, 32768, 36864, 40960, 45056, 49152, 53248, 57344, 61440`
+
+### Minimum change
+
+- To **decrease** priority → decrease by **4096**
+- To **increase** priority → increase by **4096**
+
+Example:
+
+Current priority = **32768**
+
+Decrease:
+
+**32768 − 4096 = 28672**
+
+Increase:
+
+**32768 + 4096 = 36864**
+
 ![image](https://github.com/psaumur/CCNA/assets/106411237/bb49a034-9f6d-4e92-9ea0-8bc71c4f2ec8)
 
 
