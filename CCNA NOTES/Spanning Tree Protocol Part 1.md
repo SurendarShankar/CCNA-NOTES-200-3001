@@ -50,11 +50,11 @@ So how we design a network, with redundant paths, that doesn’t result in LAYER
 
 SPANNING TREE PROTOCOL is one solution
 
-🌐 **Broadcast Storm**
+🌐 **Broadcast Storm :**
 
 A **broadcast storm** happens when a network has **too many broadcast frames circulating continuously**, usually because of a **Layer 2 loop**.
 
-🛡️ **How STP Prevents It**
+🛡️ **How STP Prevents It ?**
 
 **STP (Spanning Tree Protocol)** detects Layer 2 loops and places a redundant port into a **blocking/discarding state**.
 
@@ -68,7 +68,7 @@ A **broadcast storm** happens when a network has **too many broadcast frames cir
 
 A **redundant port** is a switch port that provides an **alternative/backup path** to another switch or network device.
 
-🧠 **CCNA Definition**
+🧠 **CCNA Definition :**
 
 > **A redundant port is a port that provides an alternate path to maintain connectivity if the primary path fails.**
 
