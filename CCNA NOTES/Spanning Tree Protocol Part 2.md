@@ -186,6 +186,64 @@ Can see in the above example, SW3 has become the “root”
 
 - The “spanning-tree vlan <vlan-number> root primary” command sets the STP PRIORITY to 24576. If another SWITCH already has a priority number lower than 24576, it sets this SWITCH’s priority to 4096 LESS THAN the other SWITCH’s Priority (remember STP PART 1 lecture)
 
+**`spanning-tree vlan root primary`**
+
+The `spanning-tree vlan 10 root primary` command is used to make a switch the **Root Bridge** for VLAN 10.
+
+**Important:**
+
+**Lower STP Priority = Better chance of becoming Root Bridge**
+
+**Case 1: No switch has a lower priority**
+
+Cisco sets the priority to **24576**.
+
+Example:
+
+- SW1 = 32768
+- SW2 = 32768
+
+You run the command on SW1:
+
+`SW1 → 24576`
+
+Now SW1 has the lowest priority.
+
+**SW1 becomes the Root Bridge.**
+
+**Case 2: Another switch already has a lower priority**
+
+Example:
+
+- SW1 = 32768
+- SW2 = **20480**
+
+You run the command on SW1.
+
+Cisco sees:
+
+> SW2 already has a priority lower than 24576.
+
+So Cisco sets SW1's priority to **4096 less than SW2**.
+
+**20480 − 4096 = 16384**
+
+Now:
+
+- SW1 = **16384**
+- SW2 = 20480
+
+SW1 has the lowest priority.
+
+**SW1 becomes the Root Bridge.**
+
+**Easy Memory:**
+
+- **Root Primary → Try to become Root**
+- Normal target = **24576**
+- If another switch is already lower → **4096 lower than that switch**
+- **Lowest priority wins**
+
 ---
 
 SECONDARY ROOT BRIGE (backup ROOT BRIDGE)
