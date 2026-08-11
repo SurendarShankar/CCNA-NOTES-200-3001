@@ -52,7 +52,7 @@ Think of it as:
 - Interfaces in a LEARNING state ONLY Sends/Receives STP BPDUs
 - Interfaces in a LEARNING state **learns** MAC ADDRESSES from regular traffic that arrives on the interface
 
-4) FORWARDING / STABLE
+**4) FORWARDING / STABLE**
 
 - ROOT and DESIGNATED PORTS are in a FORWARDING state
 - A PORT in the FORWARDING state operate as NORMAL
