@@ -9,6 +9,24 @@ STP STATES
 - NON-DESIGNATED PORTS remain STABLE in a BLOCKING state
 - LISTENING and LEARNING are TRANSITIONAL states which are passed through when an interface is activated, or when a BLOCKING PORT must transition to a FORWARDING state due to a change in network topology.
 
+**STP BPDU — Simple Explanation**
+
+**BPDU = Bridge Protocol Data Unit**
+
+It is a **special message sent between switches** to exchange information for **STP (Spanning Tree Protocol)**.
+
+Think of it as:
+
+> **Switch → "Hello, this is who I am, and this is the path I know." → Other Switch**
+
+**What information does a BPDU contain?**
+
+- **Root Bridge ID** → Who is the current Root Bridge?
+- **Root Path Cost** → How far is the switch from the Root Bridge?
+- **Sender/Bridge ID** → Which switch sent this BPDU?
+- **Port ID** → Which port sent it?
+- **Timers** → STP timing information
+
 **1) BLOCKING / STABLE**
 
 - NON-DESIGNATED PORTS are in a BLOCKING state
