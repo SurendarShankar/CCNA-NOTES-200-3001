@@ -329,3 +329,97 @@ SW1(config-if)# spanning-tree portfast [edge] trunk
 ```
 
 ---
+
+## BPDU Guard
+
+- PortFast should only be enabled on ports connected to non-switch devices (end hosts, routers) that don’t send BPDUs.
+- A PortFast-enabled port still sends BPDUs and will operate like a regular STP port if it receives BPDUs from a neighbor.
+- If an end user carelessly connects a switch to a port meant for end hosts, it could affect the STP topology.
+- BPDU Guard protects the network from unauthorized switches being connected to ports intended for end hosts.
+- If the port receives a BPDU, it enters the error-disabled (err-disabled) state, effectively disabling the port.
+- Per-port:
+  `SW1(config-if)# spanning-tree bpduguard enable`
+- Default:
+  `SW1(config)# spanning-tree portfast [edge] bpduguard default`
+- Enables BPDU Guard on all PortFast-enabled ports.
+- Use `spanning-tree bpduguard disable` to disable it on specific ports.
+- An err-disabled port can be re-enabled in two ways:
+  1. Manual: `shutdown` and `no shutdown`
+  2. Automatic: ErrDisable Recovery
+     - `SW1(config)# errdisable recovery cause bpduguard`
+- In either case, make sure you fix the underlying problem that caused the port to be err-disabled.
+
+## BPDU Filter
+
+- BPDU Filter prevents a port from sending BPDUs.
+- Unlike BPDU Guard, it does not disable the port if it receives a BPDU.
+- Per-port:
+  `SW1(config-if)# spanning-tree bpdufilter enable`
+- The port will ignore any BPDUs it receives. Use with caution!
+- Default:
+  `SW1(config)# spanning-tree portfast [edge] bpdufilter default`
+- Enables BPDU Filter on all PortFast-enabled ports.
+- If the port receives a BPDU, PortFast and BPDU Filter are disabled, and it operates as a normal STP port.
+  
+#### This was a example explination for the above line :BPDU Filter
+
+Think of BPDU Filter as:
+
+"Don't send/receive STP BPDU messages on this PortFast port."
+
+Why do we need it?
+
+Normally, a PortFast port is connected to an end device like:
+
+- PC
+- Printer
+- Server
+
+So the switch assumes:
+
+"This port is connected to an end device, not another switch."
+
+BPDU Filter prevents BPDUs from being exchanged on PortFast ports.
+
+Command:
+
+spanning-tree portfast bpdufilter default
+
+This enables BPDU Filter on PortFast-enabled ports.
+
+Example:
+
+SW1 ─────── PC
+       PortFast
+       BPDU Filter
+
+The PortFast port normally doesn't exchange BPDUs.
+
+What if someone connects a switch?
+
+SW1 ─────── SW2
+       PortFast port
+       + BPDU Filter
+
+If SW2 sends a BPDU, the port detects the BPDU and returns to normal STP operation.
+
+Simple memory trick:
+
+PortFast     = Skip STP waiting
+BPDU Filter  = Filter/stop BPDUs
+BPDU received = "This may be a switch → return to normal STP."
+
+Specific command:
+
+spanning-tree bpdufilter disable
+
+This disables BPDU Filter on a specific interface.
+
+Important:
+
+BPDU Filter is not the main security feature for an unauthorized switch.
+
+BPDU Guard is designed for that purpose.
+
+BPDU Guard → If a BPDU is received on a PortFast port, the port can be placed into an err-disabled state.
+- Use `spanning-tree bpdufilter disable` to disable it on specific ports.
