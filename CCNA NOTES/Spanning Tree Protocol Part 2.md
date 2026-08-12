@@ -286,3 +286,46 @@ CONFIGURE STP PORT SETTINGS
 “cost” = “ROOT COST”
 
 “port-priority” = “PORT PRIORITY”
+
+---
+
+# PortFast
+
+* When a host connects to a switch port, by default it takes **30 seconds** before the port can send/receive data.
+
+* **PortFast** allows a switch port to immediately enter the **STP Forwarding state**, bypassing the **Listening** and **Learning** states.
+
+* It can be configured in two ways:
+
+### 1. Interface Configuration Mode
+
+```text
+SW1(config-if)# spanning-tree portfast [edge]
+```
+
+* Enables PortFast only on the **individual interface**.
+* It is active only when the interface is in **access mode**.
+
+### 2. Global Configuration Mode
+
+```text
+SW1(config)# spanning-tree portfast [edge] default
+```
+
+* Enables PortFast on **all access ports**.
+* You can disable PortFast on a specific port using:
+
+```text
+SW1(config-if)# spanning-tree portfast disable
+```
+
+### Important
+
+* **Do NOT configure PortFast on ports connected to another switch**, as it can cause temporary **Layer 2 loops**.
+* PortFast can be enabled on a trunk port using:
+
+```text
+SW1(config-if)# spanning-tree portfast [edge] trunk
+```
+
+---
