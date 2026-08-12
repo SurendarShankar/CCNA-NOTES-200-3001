@@ -360,9 +360,11 @@ SW1(config-if)# spanning-tree portfast [edge] trunk
   `SW1(config)# spanning-tree portfast [edge] bpdufilter default`
 - Enables BPDU Filter on all PortFast-enabled ports.
 - If the port receives a BPDU, PortFast and BPDU Filter are disabled, and it operates as a normal STP port.
+- Use `spanning-tree bpdufilter disable` to disable it on specific ports.
   
-#### This was a example explination for the above line :BPDU Filter
-
+#### This was a example explination for this line : If the port receives a BPDU, PortFast and BPDU Filter are disabled, and it operates as a normal STP port
+- BPDU Filter:
+  
 Think of BPDU Filter as:
 
 "Don't send/receive STP BPDU messages on this PortFast port."
@@ -422,4 +424,4 @@ BPDU Filter is not the main security feature for an unauthorized switch.
 BPDU Guard is designed for that purpose.
 
 BPDU Guard → If a BPDU is received on a PortFast port, the port can be placed into an err-disabled state.
-- Use `spanning-tree bpdufilter disable` to disable it on specific ports.
+
