@@ -59,9 +59,6 @@ A special thanks to the original author for creating and sharing such a well-str
 - Day 19 - [DTP & VTP](LINK)
 - Day 20 - [Spanning Tree Protocol Part 1](https://github.com/SurendarShankar/CCNA-NOTES-200-3001/blob/main/CCNA%20NOTES/Spanning%20Tree%20Protocol%20Part%201.md)
 - Day 21 - [Spanning Tree Protocol Part 2](https://github.com/SurendarShankar/CCNA-NOTES-200-3001/blob/main/CCNA%20NOTES/Spanning%20Tree%20Protocol%20Part%202.md)
--        - [PortFast](LINK)
--        - [PortFast](LINK)
--        - [PortFast](LINK) 
 - Day 22 - [Rapid STP](LINK)
 - Day 23 - [EtherChannel](LINK)
 
