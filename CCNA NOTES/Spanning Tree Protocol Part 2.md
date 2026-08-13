@@ -363,7 +363,7 @@ SW1(config-if)# spanning-tree portfast [edge] trunk
 - Use `spanning-tree bpdufilter disable` to disable it on specific ports.
   
 #### This was a example explination for this line : If the port receives a BPDU, PortFast and BPDU Filter are disabled, and it operates as a normal STP port
-- BPDU Filter:
+BPDU Filter:
   
 Think of BPDU Filter as:
 
