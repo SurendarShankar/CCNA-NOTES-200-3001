@@ -425,3 +425,83 @@ BPDU Guard is designed for that purpose.
 
 BPDU Guard → If a BPDU is received on a PortFast port, the port can be placed into an err-disabled state.
 
+---
+
+# Root Guard
+
+- When selecting a LAN's Root Bridge, you should consider the following:
+  - Optimal traffic flow
+  - Minimize latency
+  - Minimize congestion
+  - Stability and reliability
+
+- Within your own LAN, you can easily control the Root Bridge by setting its priority to 0.
+
+- There are cases where you might connect your switches to other switches outside of your control (e.g., service provider + client).
+
+- Root Guard can be configured on specific ports to prevent them from accepting superior BPDUs from switches outside of your control.
+
+- Use the following command to enable Root Guard on a port:
+  `SW(config-if)# spanning-tree guard root`
+
+- There is no command to enable it by default from global config mode.
+
+- Root Guard prevents a port from becoming a Root Port if it receives a superior BPDU.
+
+- If the port receives a superior BPDU, it becomes Broken (BKN) / Root Inconsistent (ROOT_Inc).
+
+- If the port stops receiving superior BPDUs, it will automatically recover.
+  
+- To re-enable a port disabled by Root Guard, you must solve the issue that disabled the port.
+- The disabled port must stop receiving superior BDPUs.
+- Tell the customer to increase the priority value of their switch.
+  4097:5254.0018.2bbd
+• Once the superior BPDUs received by SW2 G0/2 and SW3 G0/3 age out, the ports will automatically be re-enabled.
+• A BPDU’s Max Age is 20 seconds by default.
+
+### Question
+
+“When a switch stops receiving superior BPDUs, what happens when the 20-second Max Age timer expires? Does the switch recalculate the Root Bridge and automatically re-enable a Root Guard-protected port, or is there another process involved?”
+
+**1. Max Age reaches 20 seconds**
+
+- Suppose SW2 receives a superior BPDU:
+```flow chat
+Superior BPDU
+     ↓
+SW2 G0/2
+     ↓
+Root Guard
+     ↓
+Root-Inconsistent
+```
+
+- Now the superior BPDUs stop.
+
+- The last BPDU information is allowed to age out.
+
+```java
+Last superior BPDU
+       ↓
+   wait ~20 sec
+       ↓
+Max Age expires
+       ↓
+Old BPDU information is removed
+```
+2. Does SW2 then find a new Root Bridge?
+
+- Yes, STP can recalculate the topology.
+
+- SW2 looks at the BPDUs it is currently receiving from its other STP neighbors and determines:
+
+* "Which switch should be the Root Bridge, and which port should be my Root Port?"
+
+- So STP recalculates.
+
+3. What happens to the Root-Guarded port?
+
+- This is the important part:
+
+- Once superior BPDUs are no longer being received, the Root Guard violation condition is cleared.
+
