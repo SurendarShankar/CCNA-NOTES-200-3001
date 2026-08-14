@@ -731,4 +731,29 @@ Loop prevented
   - If Loop Guard is configured on a port and you then configure Root Guard, Loop Guard will be disabled on the port (and vice versa).
   - If Loop Guard is enabled by default (`spanning-tree loopguard default`) and you then configure Root Guard on a port, Loop Guard will be disabled on the port.
 
+---
+# BPDU Guard vs Root Guard vs Loop Guard
+
+| Feature                 | **BPDU Guard**                       | **Root Guard**                              | **Loop Guard**                         |
+| ----------------------- | ------------------------------------ | ------------------------------------------- | -------------------------------------- |
+| **Main purpose**        | Protect PortFast ports               | Prevent another switch becoming Root Bridge | Prevent STP loops                      |
+| **What triggers it?**   | **Any BPDU is received**             | **Superior BPDU is received**               | **Expected BPDU stops being received** |
+| **Port state**          | **Err-disabled**                     | **Root-inconsistent**                       | **Loop-inconsistent**                  |
+| **Typical location**    | Access/PortFast ports                | Designated ports                            | Root/Alternate ports                   |
+| **Automatic recovery?** | Usually needs recovery/configuration | Yes, after superior BPDUs stop              | Yes, after BPDUs return                |
+| **Simple meaning**      | "Why did I receive a BPDU?"          | "Don't become Root through this port!"      | "Where did my BPDU go?"                |
+
+---
+
+# BPDU Guard vs BPDU Filter
+
+| Feature              | **BPDU Guard**                             | **BPDU Filter**                             |
+| -------------------- | ------------------------------------------ | ------------------------------------------- |
+| **Purpose**          | Protect against an unexpected switch       | Prevent/suppress BPDUs                      |
+| **BPDU received**    | Port is **err-disabled**                   | Behavior depends on configuration           |
+| **Port state**       | **Err-disabled**                           | Usually remains up                          |
+| **Common use**       | PortFast access ports                      | Special PortFast situations                 |
+| **Per-port command** | `spanning-tree bpduguard enable`           | `spanning-tree bpdufilter enable`           |
+| **Global command**   | `spanning-tree portfast bpduguard default` | `spanning-tree portfast bpdufilter default` |
+| **Simple meaning**   | **"BPDU received → STOP!"**                | **"Don't send/receive BPDU."**              |
 
