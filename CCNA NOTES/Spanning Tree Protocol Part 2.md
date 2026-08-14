@@ -405,6 +405,15 @@ SW1 ─────── SW2
 
 If SW2 sends a BPDU, the port detects the BPDU and returns to normal STP operation.
 
+```flowchart 
+BPDU received
+      ↓
+PortFast behavior stops
+      ↓
+Normal STP operation
+      ↓
+Listening / Learning / Forwarding or Blocking
+```
 Simple memory trick:
 
 PortFast     = Skip STP waiting
