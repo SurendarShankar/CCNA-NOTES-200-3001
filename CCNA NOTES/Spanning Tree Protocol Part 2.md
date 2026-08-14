@@ -526,6 +526,196 @@ Old BPDU information is removed
   - Typically caused by Layer 1 issues on fiber-optic cables.
     - If the connected devices don’t detect the issue and disable their interfaces, it can result in a unidirectional link.
     - If a Root or Non-Designated port stops receiving BPDUs, it will become a Designated port, potentially causing a Layer 2 loop.
+
+# Loop Guard – BPDU Failure Flow
+
+## 1. Imagine this topology
+
+```text
+        SW2                  SW3
+```
+
+**Designated Port**      **Non-Designated/Alternate Port**
+
+```text
+         |                     |
+         |       BPDU          |
+         | ------------------> |
+         |                     |
+```
+
+Here:
+
+* **SW2 = Designated Port (DP)**
+* **SW3 = Non-Designated/Alternate Port**
+* **SW2 sends the BPDU**
+* **SW3 receives the BPDU**
+
+So normally:
+
+```text
+SW2 ───────────────> SW3
+          BPDU
+```
+
+---
+
+# 2. Now the Link Has a Problem
+
+Imagine the link becomes **unidirectional**.
+
+The important point is:
+
+> **SW2's BPDU cannot reach SW3.**
+
+```text
+        SW2                    SW3
+         |                      |
+         |       BPDU ❌        |
+         | --------X----------> |
+         |                      |
+      DP                     Alternate
+```
+
+## Who stops receiving the BPDU?
+
+👉 **SW3**
+
+Not SW2.
+
+SW3 was receiving BPDUs from SW2, but now:
+
+```text
+SW2 → BPDU → SW3
+```
+
+❌
+
+```text
+SW2 → BPDU X SW3
+```
+
+So **SW3 stops receiving BPDUs**.
+
+---
+
+# 3. What Happens Without Loop Guard?
+
+SW3 still remembers the **last BPDU** it received from SW2.
+
+It doesn't immediately change anything.
+
+It waits for that BPDU information to **age out**.
+
+```text
+Last BPDU received by SW3
+          ↓
+        Wait
+          ↓
+BPDU information expires
+          ↓
+SW3 no longer has SW2's BPDU
+```
+
+Now SW3 asks:
+
+> "Do I still have a better BPDU from SW2?"
+
+Answer:
+
+> **No.**
+
+So SW3 can recalculate STP.
+
+If SW3 now considers **its own BPDU better on that segment**, its Alternate Port can become the **Designated Port**.
+
+## Before
+
+```text
+SW2 = Designated
+SW3 = Alternate
+       ↓
+    BLOCKING
+```
+
+## After BPDU ages out
+
+```text
+SW2 = Designated
+SW3 = Designated
+       ↓
+   FORWARDING
+```
+
+⚠️ This is dangerous because both sides may now forward, potentially creating a **Layer 2 loop** in a larger redundant topology.
+
+---
+
+# 4. With Loop Guard
+
+Now put **Loop Guard** on SW3's non-designated port.
+
+```text
+SW2                         SW3
+DP                      Alternate
+ |                         |
+ |       BPDU ❌           |
+ |---------X-------------->|
+                           ↓
+                       Loop Guard
+                           ↓
+                  Loop-Inconsistent
+                           ↓
+                       BLOCKING
+```
+
+So SW3 **does NOT become Designated**.
+
+---
+
+# 5. Exact Flow to Remember
+
+```text
+SW2 sends BPDU
+      ↓
+SW3 receives BPDU normally
+      ↓
+Link failure
+      ↓
+SW3 stops receiving BPDU
+      ↓
+Last BPDU information ages out
+      ↓
+WITHOUT Loop Guard:
+SW3 may become Designated
+      ↓
+Forwarding ❌
+```
+
+### With Loop Guard:
+
+```text
+SW2 sends BPDU
+      ↓
+SW3 receives BPDU normally
+      ↓
+Link failure
+      ↓
+SW3 stops receiving BPDU
+      ↓
+Loop Guard detects missing BPDU
+      ↓
+SW3 → Loop-Inconsistent
+      ↓
+Remains blocked ✅
+      ↓
+Loop prevented
+```
+
+# ⭐ Most Important Sentence
+
+> **SW2 is the switch sending the BPDU. SW3 is the switch that stops receiving it. Loop Guard protects SW3's non-designated port from becoming Designated after the BPDU information ages out.**
+
       
 - If a Loop Guard-enabled port stops receiving BPDUs, it enters the Broken (Loop Inconsistent) state, effectively disabling the port.
   -If it starts receiving BPDUs again, it will be automatically re-enabled.
