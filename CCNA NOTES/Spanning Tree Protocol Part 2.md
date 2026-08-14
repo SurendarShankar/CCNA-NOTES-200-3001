@@ -514,3 +514,31 @@ Old BPDU information is removed
 
 - Once superior BPDUs are no longer being received, the Root Guard violation condition is cleared.
 
+---
+
+# Loop Guard
+
+- Loop Guard protects the network from loops by blocking a port if it unexpectedly stops receiving BPDUs.
+  - A software bug preventing a switch from sending BPDUs.
+  - A hardware issue causing a unidirectional link.
+    
+- A unidirectional link is a network link where data transmission occurs in only one direction.
+  - Typically caused by Layer 1 issues on fiber-optic cables.
+    - If the connected devices don’t detect the issue and disable their interfaces, it can result in a unidirectional link.
+    - If a Root or Non-Designated port stops receiving BPDUs, it will become a Designated port, potentially causing a Layer 2 loop.
+      
+- If a Loop Guard-enabled port stops receiving BPDUs, it enters the Broken (Loop Inconsistent) state, effectively disabling the port.
+  -If it starts receiving BPDUs again, it will be automatically re-enabled.
+  
+- Loop Guard can be enabled in two ways:
+
+   * **Per-port:** `SW3(config-if)# spanning-tree guard loop`
+   * **Default:** `SW3(config)# spanning-tree loopguard default`
+      - This enables Loop Guard on all ports.
+      - Use `SW3(config-if)# spanning-tree guard none` to disable it on specific ports if needed.
+        
+- Loop Guard and Root Guard are mutually exclusive.
+  - If Loop Guard is configured on a port and you then configure Root Guard, Loop Guard will be disabled on the port (and vice versa).
+  - If Loop Guard is enabled by default (`spanning-tree loopguard default`) and you then configure Root Guard on a port, Loop Guard will be disabled on the port.
+
+
