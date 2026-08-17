@@ -144,6 +144,60 @@ RAPID SPANNING TREE PROTOCOL
     - In CLASSIC STP, a SWITCH waits 10 “hello” intervals (20 seconds)
     - In RAPID STP, a SWITCH considers a neighbour lost if it misses 3 BPDUs (6 seconds). It will then “flush” ALL MAC ADDRESSES learned on that interface
 
+  # 🔄 RSTP BPDU Process
+
+- **Hello Time:** 2 seconds
+- RSTP switches send **BPDUs every 2 seconds**.
+
+### Example
+
+SW1 ───────── SW2  
+        BPDU
+
+If SW2 stops receiving BPDUs from SW1:
+
+2 sec → Missed ❌  
+2 sec → Missed ❌  
+2 sec → Missed ❌  
+↓  
+**6 seconds**  
+↓  
+**Neighbor considered LOST**
+
+- After **3 missed BPDUs (6 seconds)**, RSTP considers the neighbor lost.
+- It then **flushes the MAC addresses** learned through that interface.
+
+### Why Flush MAC Addresses?
+
+Example:
+
+MAC-A → G0/1  
+MAC-B → G0/1  
+MAC-C → G0/1
+
+If the path through **G0/1 fails**, these MAC addresses may now be reachable through another path.
+
+So the switch removes them:
+
+MAC-A ❌  
+MAC-B ❌  
+MAC-C ❌
+
+Then the switch **learns their new locations**.
+
+## 🆚 Classic STP vs RSTP
+
+| | **Classic STP (802.1D)** | **RSTP (802.1w)** |
+|---|---:|---:|
+| Hello Time | 2 sec | 2 sec |
+| Failure Detection | ~20 sec | ~6 sec |
+| Reaction | Slower | Faster |
+
+## 🧠 Easy Memory
+
+**RSTP:** 2 sec × 3 missed BPDUs = **6 sec**  
+→ Neighbor lost → **Flush MAC addresses** → Learn new locations.
+
 ![image](https://github.com/psaumur/CCNA/assets/106411237/c03d2645-42d8-4d95-b486-999e82ac12a8)
 
 ---
