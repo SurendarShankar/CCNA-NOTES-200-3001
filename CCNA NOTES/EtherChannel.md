@@ -175,6 +175,20 @@ AFTER CONFIGURING THE ETHERCHANNEL MODE
 
 CONFIGURING THE PORT INTERFACE
 
+- **Question:** After configuring the EtherChannel mode, why do we need to configure the port interface as a trunk?
+
+- **Answer:**
+  - EtherChannel and trunking are two different things.
+  - **EtherChannel** combines multiple physical links into one logical link.
+  - **Trunk** allows the link to carry traffic from **multiple VLANs**.
+  - Therefore, if the EtherChannel needs to carry multiple VLANs, we configure the **Port-Channel interface as a trunk**.
+  - If only one VLAN is being used, a trunk is not required.
+
+- **Remember:**
+  - EtherChannel = Combines multiple physical links.
+  - Trunk = Carries multiple VLANs.
+  - Multiple frames/packets do **not** require a trunk.
+
 ![image](https://github.com/psaumur/CCNA/assets/106411237/c485cdf1-f0ed-44b8-8c91-c0553bf6d82d)
 
 “show running-config” shows “interface Port-channel1” in the configuration
