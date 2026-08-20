@@ -8,9 +8,9 @@ Instead of manually telling the router every route, routers **exchange routing i
 
 **Static vs Dynamic**
 
-```text
-STATIC ROUTING
 
+STATIC ROUTING
+```text
 Admin manually configures routes
         ↓
 Router uses those routes
