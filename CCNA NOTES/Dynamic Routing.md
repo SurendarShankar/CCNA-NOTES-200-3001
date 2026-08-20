@@ -241,6 +241,50 @@ FLOATING STATIC ROUTES
 
 - By CHANGING the AD of a STATIC ROUTE, you can make it less preferred than ROUTES learned by a DYNAMIC ROUTING PROTOCOL to the same DESTINATION (make sure the AD is HIGHER than the ROUTING PROTOCOL’s AD!)
 - This kind of ROUTE is called a ‘FLOATING STATIC ROUTE’
+
+**Floating Static Route** is a **backup static route**.
+
+The key idea is:
+
+> A floating static route is a static route with a **higher Administrative Distance (AD)**, so it is used only when the primary route fails.
+
+Example:
+
+R1 ---- Primary Link ---- R2
+ |
+ +---- Backup Link ----- R2
+
+Suppose R1 has a primary route:
+
+    ip route 192.168.2.0 255.255.255.0 10.0.0.2
+
+Normal static route has **AD = 1**.
+
+For the backup route, we give it a higher AD:
+
+    ip route 192.168.2.0 255.255.255.0 20.0.0.2 10
+                                                   ↑
+                                                   AD
+
+Here **AD = 10**.
+
+Primary route  → AD 1  → Used ✅
+Backup route   → AD 10 → Inactive ❌
+
+If the primary route disappears:
+
+Primary route ❌
+      ↓
+Backup floating static route
+      ↓
+Used ✅
+
+### Easy way to remember
+
+**Floating = Backup**
+
+**Higher AD = Less preferred**
+
 - The ROUTE will be inactive (not in the ROUTING TABLE) unless the ROUTE learned by the DYNAMIC ROUTING PROTOCOL is removed.
     - **Ex:** The remote ROUTER stops ADVERTISING it for some reason, or an INTERFACE failure causes an ADJACENCY with a NEIGHBOR to be lost.
 
