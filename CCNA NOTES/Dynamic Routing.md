@@ -2,6 +2,29 @@
 
 WHAT IS DYNAMIC ROUTING?
 
+**Dynamic routing** is a method where **routers automatically learn and update routes** using a **routing protocol**.
+
+Instead of manually telling the router every route, routers **exchange routing information with other routers** and build their routing tables automatically.
+
+**Static vs Dynamic**
+
+```text
+STATIC ROUTING
+
+Admin manually configures routes
+        ↓
+Router uses those routes
+        ↓
+Link fails → Admin may need to change route
+
+DYNAMIC ROUTING
+
+Router learns routes automatically
+        ↓
+Routers exchange information
+        ↓
+Link fails → Protocol can recalculate routes
+
 ![image](https://github.com/psaumur/CCNA/assets/106411237/8acc17ee-5d4b-4725-b5e4-18dc5743340e)
 
 - LAYER 3
