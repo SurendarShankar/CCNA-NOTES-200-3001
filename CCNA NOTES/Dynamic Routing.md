@@ -17,14 +17,15 @@ Router uses those routes
         ↓
 Link fails → Admin may need to change route
 
+```
 DYNAMIC ROUTING
-
+```text
 Router learns routes automatically
         ↓
 Routers exchange information
         ↓
 Link fails → Protocol can recalculate routes
-
+```
 ![image](https://github.com/psaumur/CCNA/assets/106411237/8acc17ee-5d4b-4725-b5e4-18dc5743340e)
 
 - LAYER 3
