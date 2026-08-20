@@ -287,7 +287,30 @@ Used ✅
 
 - The ROUTE will be inactive (not in the ROUTING TABLE) unless the ROUTE learned by the DYNAMIC ROUTING PROTOCOL is removed.
     - **Ex:** The remote ROUTER stops ADVERTISING it for some reason, or an INTERFACE failure causes an ADJACENCY with a NEIGHBOR to be lost.
+### Floating Static Route with OSPF
 
+A floating static route is a **backup route** for OSPF.
+
+Normal situation:
+
+OSPF route → AD 110 → Active ✅
+Floating static → AD 120 → Inactive ❌
+
+Because **lower AD is preferred**, OSPF is used.
+
+If the OSPF route fails:
+
+OSPF route → Removed ❌
+       ↓
+Floating static route → Installed ✅
+       ↓
+Used for forwarding traffic
+
+### Easy to remember
+
+**OSPF available → Floating static waits.**
+
+**OSPF fails → Floating static takes over.**
 ---
 
 LINK STATE ROUTING PROTOCOLS
