@@ -224,4 +224,242 @@ Variance 1 = only ECMP (Equal-Cost Multiple Path) load-balancing will be perform
 
 Variance 2 = ***feasible successor*** routes with an FD up to 2x the ***successor*** route’s FD can be used to load-balance
 
+---
+
+#### *Example :*
+**EIGRP Unequal-Cost Load Balancing**
+
+Let's understand it with a simple EIGRP topology instead of just memorizing the rule.
+
+Imagine this network:
+
+                 R2
+              /      \
+          10 /        \ 20
+            /          \
+           R1            R3
+            \           /
+          15 \         / 5
+                \     /
+                  R4
+
+R1 wants to reach the network behind R3.
+
+There are two possible paths:
+
+Path 1: R1 → R2 → R3
+Path 2: R1 → R4 → R3
+
+Suppose EIGRP calculates:
+
+R1 → R2 → R3
+FD = 20       ← Best path
+
+R1 → R4 → R3
+Total metric = 30
+
+So R2 is the **Successor**.
+
+
+**Step 1: Identify the Successor**
+
+The **Successor** is the best route to the destination.
+
+R1
+ │
+ │ Best route
+ ▼
+R2 ─────→ R3
+
+Successor FD = 20
+
+
+**Step 2: Check the Backup Route**
+
+R4 also knows how to reach R3.
+
+R1 asks R4:
+
+"What is your distance to the destination?"
+
+Suppose R4 replies:
+
+R4's Reported Distance (RD) = 15
+
+Now EIGRP checks the **Feasibility Condition**:
+
+RD < Successor FD
+
+15 < 20
+
+This is TRUE. ✅
+
+Therefore:
+
+R4 = **Feasible Successor**
+
+Now R1 has:
+
+Successor          → R2
+Feasible Successor → R4
+
+
+**Step 3: Check Variance**
+
+Suppose:
+
+Best path FD = 20
+Backup path metric = 30
+
+And we configure:
+
+variance 2
+
+EIGRP calculates:
+
+20 × 2 = 40
+
+The backup route's metric is:
+
+30
+
+Now:
+
+30 ≤ 40
+
+So R4 can participate in **unequal-cost load balancing**. ✅
+
+Traffic can now use:
+
+R1 → R2 → R3    Metric = 20
+R1 → R4 → R3    Metric = 30
+
+The costs are different, so this is called **unequal-cost load balancing**.
+
+
+**Step 4: What if the Feasibility Condition Fails?**
+
+Now let's change only one thing.
+
+Suppose R4's Reported Distance is:
+
+RD = 25
+
+Remember:
+
+Successor FD = 20
+
+Check the Feasibility Condition:
+
+RD < FD
+
+25 < 20
+
+❌ FALSE
+
+Therefore:
+
+R4 is **NOT a Feasible Successor**.
+
+
+**Step 5: What if we increase the Variance?**
+
+Suppose we configure:
+
+variance 10
+
+The variance calculation would be:
+
+20 × 10 = 200
+
+R4's metric is only:
+
+30
+
+So mathematically:
+
+30 ≤ 200
+
+But R4 still **will NOT be used** for unequal-cost load balancing.
+
+Why?
+
+Because the feasibility condition failed first.
+
+The process is:
+
+Feasibility Condition ❌
+        ↓
+Not a Feasible Successor
+        ↓
+Cannot be used for unequal-cost load balancing
+
+**Variance cannot fix a failed Feasibility Condition.**
+
+
+**Why does EIGRP require the Feasibility Condition?**
+
+EIGRP uses the Feasibility Condition to help ensure that the backup route is **loop-free**.
+
+Imagine R1 chooses R4 as a backup route, but R4's path to the destination eventually goes back through R1.
+
+That could create a routing loop:
+
+R1 → R4
+↑     ↓
+└─────┘
+  LOOP
+
+So EIGRP first checks:
+
+"Is this route safe and loop-free?"
+
+Only if the answer is YES does EIGRP consider the route for unequal-cost load balancing.
+
+
+**The complete flow**
+
+Backup Route
+     ↓
+Check Feasibility Condition
+     ↓
+Is it a Feasible Successor?
+     ↓
+   YES
+     ↓
+Check Variance
+     ↓
+Is the route within the variance range?
+     ↓
+   YES
+     ↓
+Unequal-Cost Load Balancing
+
+
+**The rule to remember**
+
+Feasible Successor → Variance → Load Balancing
+
+In simple words:
+
+**First, EIGRP checks whether the backup route is a Feasible Successor.**
+
+**Then, EIGRP checks whether its metric is within the configured variance.**
+
+**Only then can the route participate in unequal-cost load balancing.**
+
+Most important condition:
+
+RD < Successor's FD
+
+If:
+
+RD ≥ Successor's FD
+
+then:
+
+❌ Not a Feasible Successor
+❌ Cannot participate in unequal-cost load balancing
+❌ Increasing the variance will NOT help
+
 💡 EIGRP will only perform UNEQUAL-COST LOAD-BALANCING over ***feasible successor*** ROUTES. If a ROUTE doesn’t meet the ***feasibility condition***, it will NEVER be selected for load-balancing, regardless of **variance**
