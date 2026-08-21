@@ -67,7 +67,7 @@ A special thanks to the original author for creating and sharing such a well-str
 ## Module 3 - Routing Technologies
 
 - Day 24 - [Dynamic Routing](https://github.com/SurendarShankar/CCNA-NOTES-200-3001/blob/main/CCNA%20NOTES/Dynamic%20Routing.md)
-- Day 25 - [RIP & EIGRP](LINK)
+- Day 25 - [RIP & EIGRP](https://github.com/SurendarShankar/CCNA-NOTES-200-3001/blob/main/CCNA%20NOTES/RIP&EIGRP.md)
 - Day 26 - [OSPF Part 1](LINK)
 - Day 27 - [OSPF Part 2](LINK)
 - Day 28 - [OSPF Part 3](LINK)
