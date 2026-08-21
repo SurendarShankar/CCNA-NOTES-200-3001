@@ -28,6 +28,20 @@ A special thanks to the original author for creating and sharing such a well-str
 
 ---
 
+## 📊 CCNA 200-301 Exam Weightage
+
+| Exam Topic | Percentage |
+|---|---:|
+| Network Fundamentals | **20%** |
+| Network Access | **20%** |
+| IP Connectivity | **25%** |
+| IP Services | **10%** |
+| Security Fundamentals | **15%** |
+| Automation and Programmability | **10%** |
+| **Total** | **100%** |
+
+---
+
 # 📖 Course Notes
 
 ## Module 1 - Networking Fundamentals
