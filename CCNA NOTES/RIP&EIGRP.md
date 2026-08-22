@@ -68,8 +68,15 @@ Because the RIP “network” command is CLASSFUL. It will automatically convert
 - R1 will look for ANY INTERFACES that match 172.16.0.0/16
 - 172.16.1.14 matches, so R1 will ACTIVATE RIP on G2/0
 - There are NO RIP neighbors connected to G2/0 so no NEW ADJACENCIES are formed
-    - Although there are NO RIP neighbors, R1 will still send ADVERTISEMENTS out of G2/0.
-    - This is unnecessary traffic, so G2/0 should be configured as a **passive interface**
+- Although there are NO RIP neighbors, R1 will still send ADVERTISEMENTS out of G2/0.
+- This is unnecessary traffic, so G2/0 should be configured as a **passive interface**
+
+**A Passive Interface**
+
+> A **passive interface** in a routing protocol means:
+>
+> **The router stops sending routing protocol messages out of that interface, but it can still advertise the connected network through other interfaces.**
+
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/634f4c6b-291c-4a21-8ae2-c8283044efce)
 
