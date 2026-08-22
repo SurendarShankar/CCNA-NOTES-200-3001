@@ -130,6 +130,25 @@ ENHANCED INTERIOR GATEWAY ROUTING PROTOCOL (EIGRP)
 - Sends messages using MULTICAST ADDRESS **224.0.0.10 (Memorize this number)**
 - Is the ONLY IGP that can perform **unequal**-cost load-balancing (by DEFAULT, it performs ECMP load-balancing over 4 paths like RIP)
 
+**Unequal-Cost Load Balancing**
+
+> **A router uses multiple paths to the same destination even though the paths have different costs/metrics.**
+
+### 🧠 Simple Meaning
+
+Think of it like roads:
+
+```text
+Road A → 10 km
+Road B → 15 km
+```
+
+Normally, you might choose only the **10-km road**.
+
+But EIGRP can be configured to **use both roads**, even though one is longer.
+
+That's **unequal-cost load balancing**.
+
 ---
 
 CONFIGURATION OF EIGRP
