@@ -82,7 +82,7 @@ A special thanks to the original author for creating and sharing such a well-str
 
 - Day 24 - [Dynamic Routing](https://github.com/SurendarShankar/CCNA-NOTES-200-3001/blob/main/CCNA%20NOTES/Dynamic%20Routing.md)
 - Day 25 - [RIP & EIGRP](https://github.com/SurendarShankar/CCNA-NOTES-200-3001/blob/main/CCNA%20NOTES/RIP&EIGRP.md)
-- Day 26 - [OSPF Part 1](LINK)
+- Day 26 - [OSPF Part 1](https://github.com/SurendarShankar/CCNA-NOTES-200-3001/blob/main/CCNA%20NOTES/OSPF%20-%20Part%201.md)
 - Day 27 - [OSPF Part 2](https://github.com/SurendarShankar/CCNA-NOTES-200-3001/blob/main/CCNA%20NOTES/OSPF%20Part%202.md)
 - Day 28 - [OSPF Part 3](LINK)
 - Day 29 - [First Hop Redundancy Protocol](LINK)
