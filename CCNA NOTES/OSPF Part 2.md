@@ -4,6 +4,33 @@ OSPF METRIC (Cost)
 
 - OSPFs METRIC is called **COST**
 - It is automatically calculated based on the bandwidth (SPEED) of the INTERFACE
+
+**Speed vs Bandwidth :**
+
+For a normal Ethernet link, you will often see:
+```
+Speed     = 100 Mbps
+Bandwidth = 100 Mbps
+```
+So they look the same.
+
+But the important difference is what they mean.
+
+>Think of a Car 🚗
+
+- Speed = how fast the car can go.
+
+- Bandwidth = how much the road can carry.
+
+In Networking
+```
+             LINK
+R1 ===================== R2
+       100 Mbps
+```
+Speed: The interface physically operates at 100 Mbps.
+Bandwidth: The link's capacity is represented as 100 Mbps.
+
 - It is calculated by DIVIDING a REFERENCE BANDWIDTH value by the INTERFACE bandwidth
 - The DEFAULT REFERENCE BANDWIDTH is 100 mbps
     - REFERENCE: 100 mbps / INTERFACE: 10 mbps = COST (10)
