@@ -15,6 +15,17 @@ OSPF NETWORK TYPES
 
 - The OSPF “NETWORK TYPE” refers to the TYPES of connection between OSPF neighbors (Ethernet, etc.)
 
+- There are THREE MAIN OSPF NETWORK TYPES:
+
+- BROADCAST :
+    - Enabled by DEFAULT on **ETHERNET** and **FDDI** (Fiber Distributed Data Interfaces) INTERFACES
+
+- POINT TO POINT :
+    - Enabled by DEFAULT on **PPP** (Point-to-Point) and **HDLC** (High-Level Data Link Control) INTERFACES
+
+- NON-BROADCAST :
+    - Enabled by DEFAULT on **FRAME RELAY** and **X.25** INTERFACES
+      
 **🔹 What is Ethernet?**
 
 **Ethernet is a technology/rule used to connect devices and exchange data over a network.**
@@ -61,18 +72,6 @@ Similarly:
 
 > **Ethernet = technology**
 > **Ethernet Network = network using Ethernet**
-
-
-- There are THREE MAIN OSPF NETWORK TYPES:
-
-- BROADCAST :
-    - Enabled by DEFAULT on **ETHERNET** and **FDDI** (Fiber Distributed Data Interfaces) INTERFACES
-
-- POINT TO POINT :
-    - Enabled by DEFAULT on **PPP** (Point-to-Point) and **HDLC** (High-Level Data Link Control) INTERFACES
-
-- NON-BROADCAST :
-    - Enabled by DEFAULT on **FRAME RELAY** and **X.25** INTERFACES
 
 <aside>
 💡  CCNA focuses on BROADCAST and POINT-TO-POINT types
