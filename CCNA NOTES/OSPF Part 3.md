@@ -179,6 +179,10 @@ DROthers will form a FULL ADJACENCY ONLY with the DR / BDR !
 
 OSPF POINT-TO-POINT NETWORK TYPE
 
+**What is a Serial Interface?**
+A **serial interface** is a **router interface used to connect a router to another router over a serial WAN link**.
+
+
 ![image](https://github.com/psaumur/CCNA/assets/106411237/51d7d486-a810-4a69-8be2-804f667fca03)
 
 - ENABLED on **SERIAL** INTERFACES using the **PPP** and **HDLC** encapsulations, by DEFAULT
