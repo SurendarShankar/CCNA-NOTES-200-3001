@@ -75,6 +75,13 @@ Similarly:
 > **Ethernet = technology**
 > **Ethernet Network = network using Ethernet**
 
+| Technology | Common Medium | Main Idea |
+|---|---|---|
+| **Ethernet** | Copper / Fiber | Common LAN technology |
+| **FDDI** | Fiber optic | Older high-speed fiber network technology |
+| **PPP** | Serial links | Point-to-point connection |
+| **HDLC** | Serial links | Point-to-point connection |
+
 <aside>
 💡  CCNA focuses on BROADCAST and POINT-TO-POINT types
 
