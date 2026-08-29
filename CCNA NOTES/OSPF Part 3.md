@@ -82,6 +82,17 @@ Similarly:
 | **PPP** | Serial links | Point-to-point connection |
 | **HDLC** | Serial links | Point-to-point connection |
 
+| Technology           | What is it?                                | Cable / Medium                  | Connection Type    | Simple Meaning                                           |
+| -------------------- | ------------------------------------------ | ------------------------------- | ------------------ | -------------------------------------------------------- |
+| **Ethernet**         | Network technology                         | Copper / Fiber                  | **Multi-access**   | Used to connect multiple devices in a LAN                |
+| **FDDI**             | Network technology                         | Fiber optic                     | **Multi-access**   | Older fiber-based network technology                     |
+| **PPP**              | WAN protocol                               | Serial link                     | **Point-to-Point** | Connects exactly two devices                             |
+| **HDLC**             | WAN protocol                               | Serial link                     | **Point-to-Point** | Connects exactly two devices                             |
+| **Frame Relay**      | WAN technology                             | Provider network                | **Multi-access**   | Connects routers through a service provider              |
+| **X.25**             | WAN technology                             | Provider network                | **Multi-access**   | Older WAN technology designed for reliable communication |
+| **Service Provider** | Company that provides network connectivity | Fiber / Copper / Wireless, etc. | —                  | Provides network services to customers                   |
+
+
 <aside>
 💡  CCNA focuses on BROADCAST and POINT-TO-POINT types
 
