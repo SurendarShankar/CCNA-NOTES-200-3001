@@ -25,7 +25,9 @@ OSPF NETWORK TYPES
 
 - NON-BROADCAST :
     - Enabled by DEFAULT on **FRAME RELAY** and **X.25** INTERFACES
-      
+
+---
+
 **🔹 What is Ethernet?**
 
 **Ethernet is a technology/rule used to connect devices and exchange data over a network.**
