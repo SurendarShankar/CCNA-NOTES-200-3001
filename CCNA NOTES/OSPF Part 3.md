@@ -15,6 +15,54 @@ OSPF NETWORK TYPES
 
 - The OSPF “NETWORK TYPE” refers to the TYPES of connection between OSPF neighbors (Ethernet, etc.)
 
+**🔹 What is Ethernet?**
+
+**Ethernet is a technology/rule used to connect devices and exchange data over a network.**
+
+For example:
+
+```text
+PC ───── Switch ───── Router
+       Ethernet
+```
+
+Ethernet defines **how data is sent between these devices**.
+
+---
+
+**🔹 What is an Ethernet Network?**
+
+An **Ethernet network** is a network where devices communicate using **Ethernet technology**.
+
+Example:
+
+```text
+        Switch
+       /   |   \
+     PC1  PC2  Router
+```
+
+If these devices communicate using Ethernet, this is an **Ethernet network**.
+
+---
+
+**🧠 Easy Way to Remember :**
+
+**Ethernet = the technology**
+
+**Ethernet Network = a network using Ethernet technology**
+
+Think of it like:
+
+> **Wi-Fi = technology**
+> **Wi-Fi Network = network using Wi-Fi**
+
+Similarly:
+
+> **Ethernet = technology**
+> **Ethernet Network = network using Ethernet**
+
+
 - There are THREE MAIN OSPF NETWORK TYPES:
 
 - BROADCAST :
