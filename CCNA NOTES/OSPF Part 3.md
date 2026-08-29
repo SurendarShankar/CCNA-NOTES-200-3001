@@ -396,3 +396,123 @@ R2 → Verified ✓
 
 **CHAP → Challenge & Response → More secure**
 
+---
+### point to point ospf 
+
+>Working Example :
+
+# 🔹 Serial Connection: DCE vs DTE
+
+Imagine two routers connected directly:
+
+```text
+       Serial Cable
+R1 ======================= R2
+```
+
+For the connection to work, **one side must provide the timing (clock)** so both routers know **when to send and receive each bit**.
+
+That's why we have:
+
+```text
+R1                         R2
+DCE ───────────────────── DTE
+ ↑                          ↑
+Provides clock             Follows clock
+```
+
+---
+
+# 🔹 1. What is DCE?
+
+**DCE = Data Communications Equipment**
+
+The **DCE side provides the clock/timing** for the serial connection.
+
+Think of DCE as the **teacher controlling the timing**:
+
+```text
+DCE
+ ↓
+"Send now"
+ ↓
+DTE
+```
+
+So the DCE side needs a **clock rate**.
+
+Example:
+
+```text
+R1 (DCE) ───────────── R2 (DTE)
+       clock rate
+          ↓
+       64000 bps
+```
+
+On Cisco:
+
+```text
+R1(config-if)# clock rate 64000
+```
+
+---
+
+# 🔹 2. What is DTE?
+
+**DTE = Data Terminal Equipment**
+
+The DTE side **does not provide the clock**.
+
+It simply **uses the clock provided by the DCE**.
+
+```text
+DCE                         DTE
+R1 ─────── Clock ─────────→ R2
+ ↑                           ↑
+Provides timing              Uses timing
+```
+
+Therefore, you normally **do NOT configure `clock rate` on the DTE side**.
+
+---
+
+# 🔥 Why is a Clock Needed?
+
+Imagine two people clapping:
+
+```text
+Person A: 👏 👏 👏 👏
+Person B: 👏 👏 👏 👏
+```
+
+They need to clap at the **same timing**.
+
+In networking, data is sent as bits:
+
+```text
+1 → 0 → 1 → 1 → 0 → 1
+```
+
+The clock tells the devices **when each bit should be sent/read**.
+
+Without synchronized timing, the receiver may not correctly understand the bits.
+
+---
+
+# 🧠 Important
+
+**Both DCE and DTE can send and receive data.**
+
+```text
+R1 (DCE)  ⇄  R2 (DTE)
+```
+
+DCE/DTE only determines **who provides the clock**, not who can send or receive.
+
+**DCE → Provides clock**
+
+**DTE → Uses clock**
+
+**Full-duplex → Both can send and receive at the same time**
+
