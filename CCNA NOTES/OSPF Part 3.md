@@ -194,6 +194,39 @@ OSPF POINT-TO-POINT NETWORK TYPE
 
 ---
 
+## 🔹 PPP and HDLC Encapsulation
+
+* **PPP** and **HDLC** are **encapsulation protocols**.
+* They are used on **serial interfaces**.
+* They define **how data is packaged and sent** between two devices.
+* Both are used for **Point-to-Point connections**.
+
+### 🔹 PPP — Point-to-Point Protocol
+
+* Used to connect **two devices**.
+* Supports **authentication (PAP/CHAP)**.
+* Provides **error detection**.
+* Supports multiple network-layer protocols.
+
+```text
+R1 ───────── PPP ───────── R2
+```
+
+### 🔹 HDLC — High-Level Data Link Control
+
+* Used on **serial point-to-point links**.
+* Provides **basic encapsulation and error detection**.
+* **Cisco HDLC is the default serial encapsulation** on Cisco routers.
+
+```text
+R1 ───────── HDLC ───────── R2
+```
+
+### 🧠 Remember
+
+**Serial Interface → PPP / HDLC → Point-to-Point**
+
+
 (ASIDE)
 
 SERIAL INTERFACES
