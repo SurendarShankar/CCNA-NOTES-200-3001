@@ -46,7 +46,7 @@ IF R1 goes down, R2 will switch from STANDY to ACTIVE after not receiving “Hel
 
 The HOST ARP TABLE doesn’t need to change since the MAC ADDRESS of the VIP is already known and traffic flows externally via R2
 
-Example to the above sentace :
+Example to the above sentace :*The main idea is that the routers share the Virtual IP and Virtual MAC, so the host doesn't need to update its ARP entry when the active router changes.*
 
 ### 🧠 Simple Company Phone Number Analogy
 
