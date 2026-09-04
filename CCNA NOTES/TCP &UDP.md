@@ -204,6 +204,7 @@ IMPORTANT PORT NUMBERS
 ### UDP Ports
 
 | No. | Service      | Full Form                                        |    Port |
+| --- | ------------ | -------------------------------------------------| ------: |
 | 1   | DHCP Server  | **Dynamic Host Configuration Protocol – Server** |  **67** |
 | 2   | DHCP Client  | **Dynamic Host Configuration Protocol – Client** |  **68** |
 | 3   | TFTP         | **Trivial File Transfer Protocol**               |  **69** |
@@ -215,5 +216,6 @@ IMPORTANT PORT NUMBERS
 ### TCP & UDP
 
 | No. | Service      | Full Form                 |   Port  |
+| --- | -------------| ------------------------- | ------: |
 | 1   | DNS          | **Domain Name System**    |  **53** |
 
