@@ -3,6 +3,9 @@
 BASICS OF LAYER 4
 
 - Provides TRANSPARENT transfer of DATA between END HOSTS (Host To Host communication)
+It means:
+
+> It allows two end devices to communicate with each other without needing to know how the data travels through the network.
 
 ---
 
