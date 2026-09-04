@@ -184,3 +184,36 @@ Number of Fields in their Headers
 IMPORTANT PORT NUMBERS
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/9e1f0422-d027-4a06-a359-d47c5c39dba1)
+
+---
+### TCP Ports
+
+| No. | Service     | Full Form                              |    Port |
+| --- | ----------- | -------------------------------------- | ------: |
+| 1   | FTP Data    | **File Transfer Protocol – Data**      |  **20** |
+| 2   | FTP Control | **File Transfer Protocol – Control**   |  **21** |
+| 3   | SSH         | **Secure Shell**                       |  **22** |
+| 4   | Telnet      | **Teletype Network**                   |  **23** |
+| 5   | SMTP        | **Simple Mail Transfer Protocol**      |  **25** |
+| 6   | HTTP        | **Hypertext Transfer Protocol**        |  **80** |
+| 7   | POP3        | **Post Office Protocol version 3**     | **110** |
+| 8   | HTTPS       | **Hypertext Transfer Protocol Secure** | **443** |
+
+---
+
+### UDP Ports
+
+| No. | Service      | Full Form                                        |    Port |
+| 1   | DHCP Server  | **Dynamic Host Configuration Protocol – Server** |  **67** |
+| 2   | DHCP Client  | **Dynamic Host Configuration Protocol – Client** |  **68** |
+| 3   | TFTP         | **Trivial File Transfer Protocol**               |  **69** |
+| 4   | SNMP Agent   | **Simple Network Management Protocol – Agent**   | **161** |
+| 5   | SNMP Manager | **Simple Network Management Protocol – Manager** | **162** |
+| 6   | Syslog       | **System Logging Protocol**                      | **514** |
+
+---
+### TCP & UDP
+
+| No. | Service      | Full Form                 |   Port  |
+| 1   | DNS          | **Domain Name System**    |  **53** |
+
