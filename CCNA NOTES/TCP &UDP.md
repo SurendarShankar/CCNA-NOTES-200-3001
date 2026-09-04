@@ -112,7 +112,7 @@ What about SEQ?
 - SEQ is not a flag.
 - It is a Sequence Number in the TCP header.
 
-It helps TCP keep track of which bytes of data have been sent.
+- **It helps TCP keep track of which bytes of data have been sent.**
 ---
 
 Establishing connections
