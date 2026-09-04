@@ -4,6 +4,60 @@ BASICS OF LAYER 4
 
 - Provides TRANSPARENT transfer of DATA between END HOSTS (Host To Host communication)
 
+---
+
+# 15 Steps — How Your PC Gets a Web Page
+
+1. **You type a website**  
+   Your browser requests a web page.
+
+2. **Application Layer**  
+   HTTP/HTTPS creates the web request.
+
+3. **Transport Layer**  
+   TCP/UDP adds transport information such as port numbers.
+
+4. **Network Layer**  
+   IP adds the source and destination IP addresses.
+
+5. **Data Link Layer**  
+   Ethernet/Wi-Fi adds MAC addresses and creates a frame.
+
+6. **Physical Layer**  
+   The frame is converted into **bits (0s and 1s)**.
+
+7. **Bits reach the router**  
+   The router receives the bits.
+
+8. **Router checks the IP address**  
+   The router looks at the destination IP and checks its routing table.
+
+9. **Router forwards the packet**  
+   It sends the packet toward the next router.
+
+10. **Packet travels through multiple routers**
+
+    ```text
+    PC → Router 1 → Router 2 → Router 3 → Web Server
+    ```
+
+11. **Packet reaches the web server**  
+    The server receives the bits.
+
+12. **Physical Layer → Data Link Layer**  
+    The server converts the signals into bits and processes the Ethernet/Wi-Fi frame.
+
+13. **Network → Transport Layer**  
+    The server processes the IP and TCP/UDP information.
+
+14. **Transport → Application Layer**  
+    The web request reaches the web application/server.
+
+15. **Web server sends the webpage back**  
+    The response travels back through the layers and network to your PC, and your browser displays the webpage.
+    
+---
+
 ![image](https://github.com/psaumur/CCNA/assets/106411237/b0309c1e-a283-428b-9d8b-c9c1568e6a58)
 
 - Provides (or DOESN’T provide) various SERVICES to APPLICATIONS:
