@@ -99,6 +99,22 @@ TCP (TRANSMISSION CONTROL PROTOCOL)
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/1f5b0753-b625-463b-9d6f-79bf5b2454dc)
 
+---
+| Flag    | Meaning        | Easy meaning                          |
+| ------- | -------------- | ------------------------------------- |
+| **SYN** | Synchronize    | 🟢 **Start a TCP connection**         |
+| **ACK** | Acknowledgment | ✅ **I received what you sent**        |
+| **FIN** | Finish         | 🔴 **I want to close the connection** |
+
+---
+What about SEQ?
+
+- SEQ is not a flag.
+- It is a Sequence Number in the TCP header.
+
+It helps TCP keep track of which bytes of data have been sent.
+---
+
 Establishing connections
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/877a8e35-2e2d-4cf4-af65-1a1834308ba9)
