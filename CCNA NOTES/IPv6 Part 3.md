@@ -152,11 +152,11 @@ DUPLICATE ADDRESS DETECTION (DAD)
 | **RS** – Router Solicitation    | Host → Router   | **"Are there any routers? Give me network information."** | Find/request information from a router |
 | **RA** – Router Advertisement   | Router → Host   | **"I am a router. Here is the network information."**     | Give IPv6 network configuration        |
 
-> NS/NA = "Who is that device?"
-> RS/RA = "Where is the router and what is my network configuration?"
+> - NS/NA = "Who is that device?"
+> - RS/RA = "Where is the router and what is my network configuration?"
 (Or)
-> NS/NA → Neighbor/MAC information
-> RS/RA → Router/network information
+> - NS/NA → Neighbor/MAC information
+> - RS/RA → Router/network information
 
 | Purpose                           | IPv4                                                | IPv6           |
 | --------------------------------- | --------------------------------------------------- | -------------- |
