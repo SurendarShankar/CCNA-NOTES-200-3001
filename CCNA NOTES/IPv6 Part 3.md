@@ -154,7 +154,9 @@ DUPLICATE ADDRESS DETECTION (DAD)
 
 > - NS/NA = "Who is that device?"
 > - RS/RA = "Where is the router and what is my network configuration?"
-- (Or)
+
+      (Or)
+      
 > - NS/NA → Neighbor/MAC information
 > - RS/RA → Router/network information
 
