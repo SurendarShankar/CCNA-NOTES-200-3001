@@ -95,7 +95,7 @@ A special thanks to the original author for creating and sharing such a well-str
 - Day 31 - [IPv6 Part 1](https://github.com/SurendarShankar/CCNA-NOTES-200-3001/blob/main/CCNA%20NOTES/IPv6-Part1.md)
 - Day 32 - [IPv6 Part 2](https://github.com/SurendarShankar/CCNA-NOTES-200-3001/blob/main/CCNA%20NOTES/IPv6-Part%202.md)
 - Day 33 - [IPv6 Part 3](https://github.com/SurendarShankar/CCNA-NOTES-200-3001/blob/main/CCNA%20NOTES/IPv6%20Part%203.md)
-- Day 34 - [Standard ACL](LINK)
+- Day 34 - [Standard ACL](https://github.com/SurendarShankar/CCNA-NOTES-200-3001/blob/main/CCNA%20NOTES/Extended%20ACL.md)
 - Day 35 - [Extended ACL](https://github.com/SurendarShankar/CCNA-NOTES-200-3001/blob/main/CCNA%20NOTES/Extended%20ACL.md)
 - Day 36 - [CDP & LLDP](LINK)
 - Day 37 - [NTP](LINK)
