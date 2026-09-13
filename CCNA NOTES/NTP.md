@@ -1,3 +1,12 @@
+|              | **Loopback Interface**                         | **Loopback Address**                   |
+| ------------ | -----------------------------------            | -------------------------------------- |
+| What is it?  | A **virtual interface**                        | An **IP address**                      |
+| Example      | `Loopback0`                                    | `127.0.0.1`                            |
+| Used on      | Router/device                                  | IP communication                       |
+| Physical?    | No                                             | It's an address, not a physical thing  |
+| Main purpose | Provides a stable virtual interface            | Identifies the **local device itself** |
+| Use Case     | It is  used as a backup interface for a device | It address is use only within the device only,That is Duplicate Address Detection (DAD).|
+
 # 37. NTP
 
 WHY IS TIME IMPORTANT FOR NETWORK DEVICES?
