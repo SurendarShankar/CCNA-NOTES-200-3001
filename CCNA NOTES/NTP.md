@@ -1,7 +1,7 @@
 |              | **Loopback Interface**                         | **Loopback Address**                   |
 | ------------ | -----------------------------------            | -------------------------------------- |
 | What is it?  | A **virtual interface**                        | An **IP address**                      |
-| Example      | `Loopback0`                                    | `127.0.0.1`                            |
+| Example      | `Loopback0`                                    | `127.0.0.1`   IPv6 `::1`                         |
 | Used on      | Router/device                                  | IP communication                       |
 | Physical?    | No                                             | It's an address, not a physical thing  |
 | Main purpose | Provides a stable virtual interface            | Identifies the **local device itself** |
