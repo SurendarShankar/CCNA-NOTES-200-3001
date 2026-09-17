@@ -1,5 +1,35 @@
 # 40. SNMP (Simple Network Management Protocol)
 
+**SNMP — Simple Network Management Protocol**
+
+**SNMP** is an **Application Layer protocol** used to **monitor and manage network devices** such as routers, switches, servers, firewalls, and access points.
+
+### Why is SNMP used?
+
+SNMP allows a **Network Management System (NMS)** to remotely:
+
+* Monitor device status
+* Check CPU and memory usage
+* Monitor interface traffic
+* Detect interface failures
+* Receive alerts from devices
+* Make certain changes when permitted
+
+### How does SNMP work?
+
+SNMP has two main components:
+
+* **SNMP Manager / NMS** → Monitors and manages network devices.
+* **SNMP Agent** → Software running on the network device that collects and provides information.
+
+```text
+SNMP Manager / NMS
+        ↕
+   SNMP messages
+        ↕
+SNMP Agent → Router / Switch
+```
+---
 SNMP OVERVIEW
 
 - SNMP is an INDUSTRY-STANDARD FRAMEWORK and PROTOCOL that was originally released in 1988
