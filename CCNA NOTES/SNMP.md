@@ -29,6 +29,14 @@ SNMP Manager / NMS
         ↕
 SNMP Agent → Router / Switch
 ```
+**What is OID in SNMP?**
+
+*OID = Object Identifier*
+
+- An OID is a unique number used to identify a specific piece of information on a network device.
+
+- Think of it like an address for a particular piece of information inside a router or switch.
+
 ---
 SNMP OVERVIEW
 
