@@ -99,7 +99,7 @@ A special thanks to the original author for creating and sharing such a well-str
 - Day 35 - [Extended ACL](https://github.com/SurendarShankar/CCNA-NOTES-200-3001/blob/main/CCNA%20NOTES/Extended%20ACL.md)
 - Day 36 - [CDP & LLDP](LINK)
 - Day 37 - [NTP](https://github.com/SurendarShankar/CCNA-NOTES-200-3001/blob/main/CCNA%20NOTES/NTP.md)
-- Day 38 - [DNS](LINK)
+- Day 38 - [DNS](https://github.com/SurendarShankar/CCNA-NOTES-200-3001/new/main/CCNA%20NOTES)
 - Day 39 - [DHCP](LINK)
 - Day 40 - [SNMP](LINK)
 - Day 41 - [Syslog](LINK)
