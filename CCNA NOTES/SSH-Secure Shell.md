@@ -1,5 +1,25 @@
 # 42. SSH (Secure Shell)
 
+### SSH — Secure Shell
+
+- **Shell** → Command-Line Interface (CLI)
+- **Secure** → SSH encrypts the communication
+- **Remote** → You can access the device from another location
+
+So:
+
+> **SSH is a protocol that provides secure, encrypted remote access to a device's CLI (shell).**
+
+### SSH and VTY
+
+```text
+PC ── SSH (encrypted) ──> VTY ──> Router CLI
+```
+VTY with SSh:
+
+> **VTY is a virtual terminal line that provides a path for remote users to access the device's CLI**
+
+---
 CONSOLE PORT SECURITY
 
 - By DEFAULT, no password us needed to access the CLI of a CISCO IOS DEVICE via the CONSOLE PORT
