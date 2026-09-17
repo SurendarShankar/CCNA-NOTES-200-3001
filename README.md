@@ -102,7 +102,7 @@ A special thanks to the original author for creating and sharing such a well-str
 - Day 38 - [DNS](https://github.com/SurendarShankar/CCNA-NOTES-200-3001/new/main/CCNA%20NOTES)
 - Day 39 - [DHCP](https://github.com/SurendarShankar/CCNA-NOTES-200-3001/blob/main/CCNA%20NOTES/DHCP.md)
 - Day 40 - [SNMP](https://github.com/SurendarShankar/CCNA-NOTES-200-3001/blob/main/CCNA%20NOTES/SNMP.md)
-- Day 41 - [Syslog](LINK)
+- Day 41 - [Syslog](https://github.com/SurendarShankar/CCNA-NOTES-200-3001/blob/main/CCNA%20NOTES/SYSLOG.md)
 - Day 42 - [SSH](LINK)
 - Day 43 - [FTP & TFTP](LINK)
 - Day 44 - [Static NAT](LINK)
