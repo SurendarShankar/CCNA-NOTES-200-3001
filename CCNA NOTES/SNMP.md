@@ -141,3 +141,14 @@ SNMP MESSAGES :
 * Inform
 * Response
 ```
+---
+
+| OSI Layer                 | Example protocols                           |
+| ------------------------- | ------------------------------------------- |
+| **Layer 7 – Application** | HTTP, HTTPS, DNS, DHCP, FTP, SSH, SNMP, NTP |
+| **Layer 4 – Transport**   | TCP, UDP                                    |
+| **Layer 3 – Network**     | IPv4, IPv6, OSPF, ICMP                      |
+| **Layer 2 – Data Link**   | Ethernet, ARP, STP, CDP, LLDP               |
+| **Layer 1 – Physical**    | Ethernet physical standards, Wi-Fi radio    |
+
+
