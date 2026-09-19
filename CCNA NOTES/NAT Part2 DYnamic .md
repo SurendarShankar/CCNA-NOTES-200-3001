@@ -91,3 +91,35 @@ PAT CONFIGURATION (INTERFACE)
 COMMAND REVIEW
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/fe0655bb-4020-4ddc-bec4-b2fb198e2314)
+
+---
+### Question
+
+If the **IP address is used at the Network Layer (L3)** and the **port number is used at the Transport Layer (L4)**, how does PAT (NAT Overload) use both the IP address and port number?
+
+### Answer
+
+Suppose your laptop sends data to YouTube:
+
+**Network Layer (L3)**
+- Source IP: `192.168.1.10`
+- Destination IP: `YouTube IP`
+
+**Transport Layer (L4)**
+- Source Port: `5001`
+- Destination Port: `443` (HTTPS)
+
+When the packet reaches your router, **PAT changes the source IP address and, if necessary, the source port number**.
+
+```text
+Before PAT:
+
+Source IP:   192.168.1.10
+Source Port: 5001
+       ↓
+     Router
+       ↓
+After PAT:
+
+Public IP:   203.0.113.5
+Public Port: 5001
