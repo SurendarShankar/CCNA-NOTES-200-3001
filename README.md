@@ -105,7 +105,7 @@ A special thanks to the original author for creating and sharing such a well-str
 - Day 41 - [Syslog](https://github.com/SurendarShankar/CCNA-NOTES-200-3001/blob/main/CCNA%20NOTES/SYSLOG.md)
 - Day 42 - [SSH](https://github.com/SurendarShankar/CCNA-NOTES-200-3001/blob/main/CCNA%20NOTES/SSH-Secure%20Shell.md)
 - Day 43 - [FTP & TFTP](LINK)
-- Day 44 - [Static NAT](LINK)
+- Day 44 - [Static NAT](https://github.com/SurendarShankar/CCNA-NOTES-200-3001/blob/main/CCNA%20NOTES/NAT%20(Static)%20-%20Part%201)
 - Day 45 - [Dynamic NAT/PAT](LINK)
 - Day 46 - [QoS Part 1](LINK)
 - Day 47 - [QoS Part 2](LINK)
