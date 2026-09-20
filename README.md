@@ -107,7 +107,7 @@ A special thanks to the original author for creating and sharing such a well-str
 - Day 43 - [FTP & TFTP](https://github.com/SurendarShankar/CCNA-NOTES-200-3001/blob/main/CCNA%20NOTES/FTP%26TFTP.md)
 - Day 44 - [Static NAT](https://github.com/SurendarShankar/CCNA-NOTES-200-3001/blob/main/CCNA%20NOTES/NAT%20Static.md)
 - Day 45 - [Dynamic NAT/PAT](https://github.com/SurendarShankar/CCNA-NOTES-200-3001/blob/main/CCNA%20NOTES/NAT%20Part2%20DYnamic%20.md)
-- Day 46 - [QoS Part 1](LINK)
+- Day 46 - [QoS Part 1](https://github.com/SurendarShankar/CCNA-NOTES-200-3001/blob/main/CCNA%20NOTES/QoS%20Part%201.md)
 - Day 47 - [QoS Part 2](LINK)
 
 ---
