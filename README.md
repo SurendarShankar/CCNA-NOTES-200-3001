@@ -115,7 +115,7 @@ A special thanks to the original author for creating and sharing such a well-str
 ## Module 5 - Security Fundamentals
 
 - Day 48 - [Security Fundamentals](LINK)
-- Day 49 - [Port Security](LINK)
+- Day 49 - [Port Security](https://github.com/SurendarShankar/CCNA-NOTES-200-3001/blob/main/CCNA%20NOTES/Port%20Security.md)
 - Day 50 - [DHCP Snooping](LINK)
 - Day 51 - [Dynamic ARP Inspection](LINK)
 
