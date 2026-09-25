@@ -216,3 +216,353 @@ BENEFITS OF CLOUD COMPUTING
 CONNECTION TO PUBLIC CLOUDS
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/671747bb-6908-47bb-b9c8-47f2df82c821)
+
+
+---
+# 1. Virtualization Breaks the 1-to-1 Relationship
+
+Before virtualization:
+
+```text
+Physical Server 1 → OS 1 → Web Server
+Physical Server 2 → OS 2 → Email Server
+Physical Server 3 → OS 3 → Database Server
+```
+
+So:
+
+**1 Physical Server → 1 OS**
+
+---
+
+# 2. Virtualization Allows Multiple OSs on One Server
+
+With virtualization, one physical server can run multiple operating systems.
+
+```text
+             Physical Server
+          ┌──────────────────┐
+          │ CPU / RAM / Disk │
+          └────────┬─────────┘
+                   ↓
+               Hypervisor
+          ┌────────┼────────┐
+          ↓        ↓        ↓
+         VM1      VM2      VM3
+          ↓        ↓        ↓
+       Linux    Windows   Linux
+```
+
+So now:
+
+**1 Physical Server → Multiple OSs**
+
+Each OS runs inside a **VM (Virtual Machine)**.
+
+---
+
+# 3. What is a VM?
+
+**VM = Virtual Machine**
+
+A VM is basically a **software-created computer**.
+
+For example:
+
+```text
+Physical Server
+       ↓
+   Hypervisor
+   ┌────┼────┐
+   ↓    ↓    ↓
+  VM1  VM2  VM3
+   ↓    ↓    ↓
+ Linux Windows Linux
+```
+
+You can think of each VM as a **separate virtual computer**.
+
+For example:
+
+* **VM1 → Web Server**
+* **VM2 → Email Server**
+* **VM3 → Database Server**
+
+---
+
+# 4. What is a Hypervisor?
+
+The **hypervisor** is the software that manages the VMs.
+
+Its job is to:
+
+* Create VMs
+* Run VMs
+---
+# 1. What is a Type 2 Hypervisor?
+
+A **Type 2 hypervisor is a normal program/application that runs inside an existing operating system.**
+
+For example, on your Windows laptop:
+
+```text
+Physical Laptop
+      ↓
+Windows OS
+      ↓
+VMware Workstation
+      ↓
+Virtual Machine
+      ↓
+Linux OS
+```
+
+### Important Point
+
+> **A Type 2 hypervisor does NOT directly run on the hardware.**
+
+It runs **on top of an existing OS**.
+
+---
+
+# 2. Examples
+
+Common Type 2 hypervisors are:
+
+* **VMware Workstation**
+* **Oracle VirtualBox**
+
+For example, you can install VirtualBox just like you install Chrome or another application.
+
+```text
+Windows
+   ↓
+Install VirtualBox
+   ↓
+Create a VM
+   ↓
+Install Linux inside the VM
+```
+
+---
+
+# 3. What is the Host OS?
+
+The operating system that is **directly running on the physical hardware** is called the **Host OS**.
+
+Example:
+
+```text
+💻 Physical Laptop
+       ↓
+   Windows OS
+```
+
+Here:
+
+**Windows = Host OS**
+
+Because Windows is directly running on your physical laptop.
+
+---
+
+# 4. What is the Guest OS?
+
+The operating system running **inside a virtual machine** is called the **Guest OS**.
+
+Example:
+
+```text
+💻 Physical Laptop
+       ↓
+   Windows OS          ← Host OS
+       ↓
+   VirtualBox
+       ↓
+   Linux VM
+       ↓
+   Linux OS            ← Guest OS
+```
+
+So:
+
+* **Windows = Host OS**
+* **Linux = Guest OS**
+
+---
+
+# 5. How Does Type 2 Actually Work?
+
+Let's say you have a Windows laptop.
+
+You want to use Linux.
+
+Instead of installing Linux directly on your laptop, you can:
+
+```text
+Step 1 → Windows is already installed
+             ↓
+Step 2 → Install VirtualBox
+             ↓
+Step 3 → Create a VM
+             ↓
+Step 4 → Install Linux inside the VM
+```
+
+### Final Structure
+
+```text
+        Physical Laptop
+              ↓
+         Windows OS
+         (Host OS)
+              ↓
+        VirtualBox
+       (Type 2 Hypervisor)
+              ↓
+          Linux VM
+              ↓
+         Linux OS
+        (Guest OS)
+```
+
+### Easy way to remember
+
+> **Type 2 = Hypervisor runs on an existing OS.**
+
+```text
+Hardware → Host OS → Type 2 Hypervisor → VM → Guest OS
+```
+---
+# SaaS, PaaS and IaaS
+
+## 1. SaaS — Software as a Service
+
+You **just use the software**. The cloud provider manages everything else.
+
+**Examples:** Gmail, Google Docs, Microsoft 365
+
+```text
+You
+ ↓
+Use the application
+ ↓
+Cloud provider manages:
+Application + OS + Servers + Storage + Network
+```
+
+**Simple:** 👉 **“I just use the software.”**
+
+---
+
+## 2. PaaS — Platform as a Service
+
+You **develop and run your own application**, while the cloud provider manages the underlying infrastructure.
+
+**Example:** You want to create a website/application.
+
+```text
+You
+ ↓
+Your Application / Code
+ ↓
+PaaS provides:
+Runtime + OS + Servers + Storage + Network
+```
+
+You don't need to worry about setting up servers and operating systems.
+
+**Simple:** 👉 **“I build the application; the cloud manages the platform.”**
+
+---
+
+## 3. IaaS — Infrastructure as a Service
+
+You rent **virtual infrastructure** such as VMs, storage, and networks.
+
+```text
+You
+ ↓
+Your Applications
+ ↓
+Your OS
+ ↓
+Virtual Machine
+ ↓
+Cloud provider's:
+Physical Servers + Storage + Network
+```
+
+You have more control, but you also have more things to manage.
+
+**Simple:** 👉 **“I rent the infrastructure and manage it.”**
+
+---
+# Cloud Deployment Models
+
+## 1. Private Cloud 🔒
+
+A cloud used by **one organization only**.
+
+```text
+Company
+   ↓
+Private Cloud
+   ↓
+Only that company uses it
+```
+
+**Example:** A bank has its own cloud infrastructure for its employees and applications.
+
+👉 **Simple:** **One organization → One cloud**
+
+---
+
+## 2. Community Cloud 👥
+
+A cloud **shared by several organizations that have similar requirements**.
+
+```text
+Hospital A ─┐
+Hospital B ─┼──→ Community Cloud
+Hospital C ─┘
+```
+
+For example, several healthcare organizations may share cloud infrastructure designed for their common security and compliance needs.
+
+👉 **Simple:** **Similar organizations → Shared cloud**
+
+---
+
+## 3. Public Cloud ☁️
+
+A cloud provided by a **cloud service provider** and available to many customers.
+
+```text
+             Public Cloud
+          ☁️☁️☁️☁️☁️
+          ↙    ↓    ↘
+       User A User B User C
+```
+
+**Examples:** AWS, Microsoft Azure, and Google Cloud.
+
+👉 **Simple:** **Cloud provider → Many customers**
+
+---
+
+## 4. Hybrid Cloud 🔄
+
+A combination of **private cloud + public cloud**.
+
+```text
+Company
+   │
+   ├── Private Cloud 🔒
+   │
+   └── Public Cloud ☁️
+```
+
+For example, a company can keep sensitive data in its **private cloud** while using the **public cloud** when it needs additional computing resources.
+
+👉 **Simple:** **Private cloud + Public cloud = Hybrid cloud**
