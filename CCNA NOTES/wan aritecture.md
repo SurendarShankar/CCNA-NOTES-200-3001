@@ -92,6 +92,34 @@ INTERNET CONNECTIVITY
 
 - There are countless ways for an enterprise to connect to the INTERNET
 - For example, PRIVATE WAN technologies such as LEASED LINES and MPLS VPNs can be used to connect to a SERVICE PROVIDER’s INTERNET infrastructure
+
+# Leased Line and ISP Connection
+
+A company can use technologies such as **leased lines** or **MPLS VPNs** to privately connect its network to an **ISP (Internet Service Provider)**.
+The ISP then provides access to its larger network and the **Internet**.
+
+**Important Point**
+
+**Leased line ≠ the Internet itself.**
+
+A leased line is the **connection between the company and the service provider**.
+
+```text
+🏢 Company
+     |
+     | Leased Line
+     ↓
+🌐 Service Provider (ISP)
+     |
+     ↓
+🌍 Internet
+```
+
+**Simple meaning**
+
+**Company → Leased Line → ISP → Internet**
+
+
 - In addition, technologies such as CATV and DSL commonly used by consumers (Home Internet Access) can also be used by an enterprise
 - These days for both enterprise and consumer INTERNET access, FIBER OPTIC ETHERNET connections are growing in popularity due to high speeds they provide over long distances
 - Let’s briefly look at TWO INTERNET access technologies mentioned above:
