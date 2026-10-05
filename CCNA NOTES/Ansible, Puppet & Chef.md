@@ -1,3 +1,13 @@
+|                                | **Console**                             | **SSH**                     | **Network Automation**                 |
+| ------------------------------ | --------------------------------------- | --------------------------- | -------------------------------------- |
+| **Access**                     | Local                                   | Remote                      | Automated                              |
+| **How?**                       | **Physical console port + cable**       | Network + SSH               | Software/script/controller             |
+| **Main purpose**               | Initial/emergency configuration         | Remote configuration        | Configure/manage devices automatically |
+| **IP needed?**                 | ❌ No                                    | ✅ Yes                       | ✅ Usually                              |
+| **Human manually configures?** | ✅ Yes                                   | ✅ Yes                       | ❌ Mostly automated                     |
+| **Example**                    | Connect laptop directly to a new switch | Configure a switch remotely | Configure 100 switches automatically   |
+
+---
 # 63. ANSIBLE, PUPPET, AND CHEF
 
 CONFIGURATION DRIFT
