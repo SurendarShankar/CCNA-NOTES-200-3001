@@ -130,3 +130,34 @@ DNA CENTER-based Network Management :
 - New network deployments are much quicker. New devices can automatically receive their configurations from DNA CENTER without manual configuration
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/cb9e0184-6b45-4dcc-85ae-cef3245c1629)
+
+---
+If you mean **Cisco DNA Center (now Cisco Catalyst Center): yes, it communicates with network devices over IP/Layer 3**, but it does **not mean every connection in the network must be Layer 3.**
+
+For SD-Access:
+
+```
+Catalyst Center
+       │
+       │ IP communication
+       ↓
+   Edge Switch
+       │
+       │ L3 routed link
+       ↓
+   Border Switch
+```
+
+**Important distinction :**
+
+- Catalyst Center → network devices: *communicates using IP-based management protocols.*
+- SD-Access underlay switch-to-switch links: typically *Layer 3* routed links in a greenfield deployment.
+- End device → Edge switch: can still use *Layer 2* access.
+
+So don't think:
+
+> ❌ "DNA Center itself uses Layer 3 links."
+
+Think:
+
+> ✅ DNA Center manages the network through IP connectivity, while SD-Access uses a Layer 3 underlay between fabric devices.
