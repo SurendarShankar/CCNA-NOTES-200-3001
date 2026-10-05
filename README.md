@@ -137,7 +137,7 @@ A special thanks to the original author for creating and sharing such a well-str
 
 ## Module 7 - Network Automation
 
-- Day 59 - [Network Automation](LINK)
+- Day 59 - [Network Automation](https://github.com/SurendarShankar/CCNA-NOTES-200-3001/blob/main/CCNA%20NOTES/introduction%20to%20Network%20Automation.md)
 - Day 60 - [JSON, XML & YAML](LINK)
 - Day 61 - [REST APIs](https://github.com/SurendarShankar/CCNA-NOTES-200-3001/blob/main/CCNA%20NOTES/REST%20APIs.md)
 - Day 62 - [Software Defined Networking (SDN)](https://github.com/SurendarShankar/CCNA-NOTES-200-3001/blob/main/CCNA%20NOTES/Software%20Defined%20Networking%20(SDN).md)
