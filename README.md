@@ -129,7 +129,7 @@ A special thanks to the original author for creating and sharing such a well-str
 - Day 54 - [Virtualization (Container) Part.2](https://github.com/SurendarShankar/CCNA-NOTES-200-3001/blob/main/CCNA%20NOTES/virtualization%20(Containers)-%20Part%202.md)
 - Day 54 - [Virtualization (VRF) - Part3](https://github.com/SurendarShankar/CCNA-NOTES-200-3001/blob/main/CCNA%20NOTES/virtualization%20(VRF)%20-%20Part3.md)
 - Day 55 - [Wireless Fundamentals](https://github.com/SurendarShankar/CCNA-NOTES-200-3001/blob/main/CCNA%20NOTES/wan%20aritecture.md)
-- Day 56 - [Wireless Architectures](LINK)
+- Day 56 - [Wireless Architectures](https://github.com/SurendarShankar/CCNA-NOTES-200-3001/blob/main/CCNA%20NOTES/Wireless%20Architectures.md)
 - Day 57 - [Wireless Security](LINK)
 - Day 58 - [Wireless Configuration](LINK)
 
