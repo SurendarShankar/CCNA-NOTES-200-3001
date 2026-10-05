@@ -97,7 +97,7 @@ A special thanks to the original author for creating and sharing such a well-str
 - Day 33 - [IPv6 Part 3](https://github.com/SurendarShankar/CCNA-NOTES-200-3001/blob/main/CCNA%20NOTES/IPv6%20Part%203.md)
 - Day 34 - [Standard ACL](https://github.com/SurendarShankar/CCNA-NOTES-200-3001/blob/main/CCNA%20NOTES/Extended%20ACL.md)
 - Day 35 - [Extended ACL](https://github.com/SurendarShankar/CCNA-NOTES-200-3001/blob/main/CCNA%20NOTES/Extended%20ACL.md)
-- Day 36 - [CDP & LLDP](LINK)
+- Day 36 - [CDP & LLDP](https://github.com/SurendarShankar/CCNA-NOTES-200-3001/blob/main/CCNA%20NOTES/CDP%20%26%20LLDP.md)
 - Day 37 - [NTP](https://github.com/SurendarShankar/CCNA-NOTES-200-3001/blob/main/CCNA%20NOTES/NTP.md)
 - Day 38 - [DNS](https://github.com/SurendarShankar/CCNA-NOTES-200-3001/new/main/CCNA%20NOTES)
 - Day 39 - [DHCP](https://github.com/SurendarShankar/CCNA-NOTES-200-3001/blob/main/CCNA%20NOTES/DHCP.md)
