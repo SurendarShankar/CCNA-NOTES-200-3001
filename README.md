@@ -116,7 +116,7 @@ A special thanks to the original author for creating and sharing such a well-str
 
 - Day 48 - [Security Fundamentals](https://github.com/SurendarShankar/CCNA-NOTES-200-3001/blob/main/CCNA%20NOTES/Security%20Fundamentals.md)
 - Day 49 - [Port Security](https://github.com/SurendarShankar/CCNA-NOTES-200-3001/blob/main/CCNA%20NOTES/Port%20Security.md)
-- Day 50 - [DHCP Snooping](LINK)
+- Day 50 - [DHCP Snooping](https://github.com/SurendarShankar/CCNA-NOTES-200-3001/blob/main/CCNA%20NOTES/DHCP%20Snooping.md)
 - Day 51 - [Dynamic ARP Inspection](LINK)
 
 ---
