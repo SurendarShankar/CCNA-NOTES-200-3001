@@ -131,7 +131,7 @@ A special thanks to the original author for creating and sharing such a well-str
 - Day 55 - [Wireless Fundamentals](https://github.com/SurendarShankar/CCNA-NOTES-200-3001/blob/main/CCNA%20NOTES/wan%20aritecture.md)
 - Day 56 - [Wireless Architectures](https://github.com/SurendarShankar/CCNA-NOTES-200-3001/blob/main/CCNA%20NOTES/Wireless%20Architectures.md)
 - Day 57 - [Wireless Security](https://github.com/SurendarShankar/CCNA-NOTES-200-3001/blob/main/CCNA%20NOTES/Wireless%20Security.md)
-- Day 58 - [Wireless Configuration](LINK)
+- Day 58 - [Wireless Configuration](https://github.com/SurendarShankar/CCNA-NOTES-200-3001/blob/main/CCNA%20NOTES/Wireless%20configuration.md)
 
 ---
 
