@@ -31,6 +31,13 @@ A byte is 8 bits (0s and 1s)
 | 1 gigabit (Gb) | 1,000,000,000 |
 | 1 terabit (Tb) | 1,000,000,000,000  |
 
+| Indian Number Format |
+| -------------------- |
+| 1 Thousand           |
+| 10 Lakh              |
+| 100 Crore            |
+| 1 Lakh Crore         |
+
 Ethernet standards are:
 
 - Defined in the IEEE 802.3 standard in 1983
