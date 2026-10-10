@@ -42,7 +42,7 @@ A special thanks to the original author for creating and sharing such a well-str
 
 ---
 
-# 📖 Course Notes
+# 📖 Course Notes [📖]()
 
 ## Module 1 - Networking Fundamentals
 
