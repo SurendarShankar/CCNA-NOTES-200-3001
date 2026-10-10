@@ -144,7 +144,7 @@ A special thanks to the original author for creating and sharing such a well-str
 - Day 63 - [Ansible, Puppet & Chef](https://github.com/SurendarShankar/CCNA-NOTES-200-3001/blob/main/CCNA%20NOTES/Ansible%2C%20Puppet%20%26%20Chef.md)
 - Day 63 - [Terraform](https://github.com/SurendarShankar/CCNA-NOTES-200-3001/blob/main/CCNA%20NOTES/Terraform.md)
   
-- [Correct structure :]()
+- [Correct structure :](https://github.com/SurendarShankar/CCNA-NOTES-200-3001/blob/main/CCNA%20NOTES/Recommended%20GitHub%20folder%20structure.md)
 ---
 
 > *"The expert in anything was once a beginner."* — Helen Hayes
