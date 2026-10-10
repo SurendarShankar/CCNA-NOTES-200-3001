@@ -42,7 +42,7 @@ A special thanks to the original author for creating and sharing such a well-str
 
 ---
 
-# 📖 Course Notes [📖]()
+# 📖 Course Notes [🫵](https://github.com/SurendarShankar/CCNA-NOTES-200-3001/blob/main/CCNA%20NOTES/read.md)
 
 ## Module 1 - Networking Fundamentals
 
